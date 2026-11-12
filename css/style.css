@@ -1723,6 +1723,7 @@ summary:focus-visible {
 
 }
 
+
 .form-busca button {
 
   padding: 15px 28px;
@@ -1731,7 +1732,7 @@ summary:focus-visible {
 
   border-radius: 12px;
 
-  background: #748B78;
+  background: #405545;
 
   color: #FFFFFF;
 
@@ -1745,7 +1746,7 @@ summary:focus-visible {
 
 .form-busca button:hover {
 
-  background: #536D59;
+  background: #304235;
 
 }
 
