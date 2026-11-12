@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Acolhimento, sa&uacute;de emocional, rede de apoio e servi&ccedil;os para gestantes e fam&iacute;lias no p&oacute;s-parto." name="description"/>
+  <title>
+   Apoio | Jornada
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+  <script defer="" src="js/main.js">
+  </script>
+  <style>
+   .pagina-apoio .pagina-apresentacao > .container {
+  position:relative;
+  z-index:2;
+}
+
+.pagina-apoio .pagina-apresentacao .etiqueta {
+  color:var(--verde);
+}
+
+
+
+.pagina-apoio .pagina-apresentacao h1 em {
+  color:var(--argila);
+  font-weight:400;
+}
+
+
+
+.pagina-apoio .ornamento-apoio {
+  position:absolute;
+  top:0;
+  right:0;
+  height:100%;
+  width:49%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center 18%;
+  pointer-events:none;
+  z-index:1;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 22%);
+  mask-image:linear-gradient(to right,transparent 0%,black 22%);
+}
+
+.pagina-apoio .navegacao-fases {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:0;
+}
+
+.pagina-apoio .navegacao-fases a {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 20px;
+  border:1px solid #C7D0C4;
+  border-radius:30px;
+  background:#fffdf9;
+  color:var(--verde-escuro);
+  font:600 .95rem/1.4 'DM Sans',Arial,sans-serif;
+  text-decoration:none;
+  transition:background .2s,color .2s;
+}
+
+.pagina-apoio .navegacao-fases a:hover {
+  background:var(--verde);
+  color:#fff;
+}
+
+.pagina-apoio .secao-interna {
+  padding:70px 0;
+  scroll-margin-top:25px;
+}
+
+.pagina-apoio .titulo-secao {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-bottom:18px;
+}
+
+.pagina-apoio .numero-secao {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  width:68px;
+  height:68px;
+  border-radius:50%;
+  background:var(--verde-claro);
+  color:var(--verde);
+  font:400 1.8rem/1 'DM Serif Display',Georgia,serif;
+}
+
+.pagina-apoio .titulo-secao .etiqueta {
+  margin-bottom:5px;
+  font-size:.75rem;
+  letter-spacing:2px;
+}
+
+.pagina-apoio .titulo-secao h2 {
+  font:400 clamp(2rem,3.5vw,3rem)/1.2 'DM Serif Display',Georgia,serif;
+  color:#402D25;
+}
+
+.pagina-apoio .introducao-secao {
+  max-width:850px;
+  margin:0 0 32px;
+  font-size:1.07rem;
+  line-height:1.85;
+}
+
+.pagina-apoio .cartilhas-grade {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:15px;
+  margin:28px 0;
+}
+
+.pagina-apoio .cartilha {
+  min-width:0;
+  background:#fffdf9;
+  border:1px solid #dce2d7;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.pagina-apoio .cartilha[open] {
+  border-color:#aabca7;
+}
+
+.pagina-apoio .cartilha-titulo {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:21px 25px;
+  cursor:pointer;
+  list-style:none;
+}
+
+.pagina-apoio .cartilha-titulo::-webkit-details-marker {
+  display:none;
+}
+
+.pagina-apoio .cartilha-titulo > span:first-child {
+  display:flex;
+  align-items:center;
+  gap:17px;
+  min-width:0;
+  flex-wrap:wrap;
+}
+
+.pagina-apoio .cartilha-numero {
+  flex:0 0 43px;
+  width:43px;
+  height:43px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:var(--argila-clara);
+  color:#86533f;
+  font:400 1.25rem/1 'DM Serif Display',Georgia,serif;
+}
+
+.pagina-apoio .cartilha-titulo strong {
+  display:block;
+  font:400 1.4rem/1.35 'DM Serif Display',Georgia,serif;
+  color:var(--verde-escuro);
+  margin:0;
+}
+
+.pagina-apoio .cartilha-titulo small {
+  display:block;
+  width:100%;
+  font-size:.9rem;
+  line-height:1.6;
+  color:#6c786d;
+}
+
+.pagina-apoio .cartilha-icone {
+  position:relative;
+  display:grid;
+  place-items:center;
+  flex:0 0 34px;
+  width:34px;
+  height:34px;
+  padding:0;
+  border-radius:50%;
+  background:#e8ede5;
+  color:#536c55;
+  font-size:0;
+  line-height:0;
+  transition:transform .2s;
+}
+
+.pagina-apoio .cartilha-icone::before, .pagina-apoio .cartilha-icone::after {
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  background:currentColor;
+  border-radius:2px;
+  transform:translate(-50%,-50%);
+}
+
+.pagina-apoio .cartilha-icone::before {
+  width:14px;
+  height:2px;
+}
+
+.pagina-apoio .cartilha-icone::after {
+  width:2px;
+  height:14px;
+}
+
+.pagina-apoio .cartilha[open] .cartilha-icone {
+  transform:rotate(45deg);
+}
+
+.pagina-apoio .cartilha-conteudo {
+  border-top:1px solid #edf0e9;
+  padding:8px 27px 27px;
+  line-height:1.8;
+  color:#49544a;
+  overflow-wrap:anywhere;
+}
+
+.pagina-apoio .cartilha-conteudo h4 {
+  margin:22px 0 8px;
+  color:#4e6952;
+  font-size:1rem;
+}
+
+.pagina-apoio .cartilha-conteudo p,.pagina-apoio .cartilha-conteudo ul {
+  margin:0 0 14px;
+}
+
+.pagina-apoio .cartilha-conteudo ul {
+  padding-left:22px;
+}
+
+.pagina-apoio .cartilha-conteudo li {
+  margin-bottom:8px;
+}
+
+.pagina-apoio .cartilha-conteudo a,.pagina-apoio .fontes-jornada a {
+  color:#506c55;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.pagina-apoio .cartilha-alerta {
+  background:#f8ece6;
+  border-left:4px solid #c9917b;
+  padding:14px 16px;
+  border-radius:8px;
+  margin:18px 0;
+}
+
+.pagina-apoio .cartilha-perguntas {
+  background:#edf1e9;
+  padding:16px;
+  border-radius:12px;
+  margin:18px 0;
+}
+
+.pagina-apoio .cartilha-fonte {
+  margin-top:22px;
+  padding-top:14px;
+  border-top:1px solid #e4e9df;
+  font-size:.85rem;
+  color:#68746a;
+}
+
+.pagina-apoio .secao-fontes {
+  padding:65px 0 75px;
+  background:#ecefe8;
+  border-top:1px solid #d6dfd1;
+}
+
+.pagina-apoio .fontes-cabecalho h2 {
+  font:400 clamp(2rem,3.5vw,3rem)/1.2 'DM Serif Display',Georgia,serif;
+  color:var(--verde-escuro);
+}
+
+.pagina-apoio .fontes-jornada {
+  max-width:900px;
+  margin-top:25px;
+  padding:28px;
+  background:#fffdf9;
+  border:1px solid #d6dfd1;
+  border-radius:18px;
+  line-height:1.8;
+}
+
+.pagina-apoio .fontes-jornada ul {
+  padding-left:22px;
+  margin:14px 0;
+}
+
+.pagina-apoio .fontes-jornada li {
+  margin-bottom:12px;
+}
+
+.pagina-apoio .fontes-jornada p + p {
+  margin-top:12px;
+}
+
+.pagina-apoio .sr-only-direitos {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+@media(max-width:1050px) {
+  .pagina-apoio .ornamento-apoio {
+    opacity:.3;
+    right:-110px;
+  }
+
+  .pagina-apoio .pagina-apresentacao h1,
+
+}
+
+@media(max-width:700px) {
+  
+
+  .pagina-apoio .ornamento-apoio {
+    opacity:.13;
+    right:-45%;
+    height:100%;
+  }
+
+  
+
+  
+
+  .pagina-apoio .navegacao-fases {
+    gap:10px;
+  }
+
+  .pagina-apoio .navegacao-fases a {
+    padding:10px 15px;
+    font-size:.9rem;
+  }
+
+  .pagina-apoio .secao-interna {
+    padding:50px 0;
+  }
+
+  .pagina-apoio .titulo-secao {
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .pagina-apoio .numero-secao {
+    width:52px;
+    height:52px;
+    font-size:1.35rem;
+  }
+
+  .pagina-apoio .cartilha-titulo {
+    padding:18px;
+  }
+
+  .pagina-apoio .cartilha-titulo strong {
+    font-size:1.18rem;
+  }
+
+  .pagina-apoio .cartilha-conteudo {
+    padding:8px 20px 22px;
+  }
+
+  .pagina-apoio .fontes-jornada {
+    padding:20px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .pagina-apoio .cartilha-icone,.pagina-apoio .navegacao-fases a {
+    transition:none;
+  }
+
+}
+
+.pagina-apoio .pagina-apresentacao .ornamento-apoio {
+  right:0;
+  opacity:.64;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 28%);
+  mask-image:linear-gradient(to right,transparent 0%,black 28%);
+}
+
+.pagina-apoio .pagina-apresentacao > .container {
+  pointer-events:none;
+}
+
+.pagina-apoio .pagina-apresentacao .navegacao-fases {
+  pointer-events:auto;
+}
+
+.pagina-apoio .nota-legal {
+  background:#f8ece6;
+  border-left:4px solid #c9917b;
+  border-radius:10px;
+  padding:20px 24px;
+  margin-top:28px;
+  max-width:900px;
+  line-height:1.8;
+}
+
+.pagina-apoio .cartilha-conteudo p + p {
+  margin-top:12px;
+}
+
+.pagina-apoio .cartilha-conteudo strong {
+  color:var(--verde-escuro);
+}
+
+@media(max-width:1050px) {
+  .pagina-apoio .pagina-apresentacao .ornamento-apoio {
+    opacity:.25;
+    right:-100px;
+  }
+
+}
+
+@media(max-width:700px) {
+  .pagina-apoio .pagina-apresentacao .ornamento-apoio {
+    opacity:.12;
+    right:-45%;
+  }
+
+}
+
+  
+
+.pagina-apoio .ornamento-apoio {
+  object-position: center 18%;
+}
+@media (max-width: 760px) {
+  .pagina-apoio .ornamento-apoio {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    object-position: center 16%;
+    opacity: .55;
+  }
+}
+  
+/* Entrada compacta aprovada para apoio. */
+
+.pagina-apoio .pagina-apresentacao .ornamento-apoio { max-height: 100%; }
+@media (max-width: 700px) {
+  
+}
+
+/* Ajuste visual aprovado: cabeçalho interno mais compacto e verde suave mais presente. */
+
+@media (max-width: 700px) {
+  
+}
+  </style>
+ </head>
+ <body class="pagina-apoio">
+  <a class="pular-conteudo" href="#conteudo">
+   Pular para o conte&uacute;do
+  </a>
+  <header class="topo">
+   <div class="container cabecalho">
+    <a class="logo" href="index.html">
+     jornada
+     <span>
+      .
+     </span>
+    </a>
+    <nav aria-label="Navega&ccedil;&atilde;o principal" class="menu">
+     <a href="index.html">
+      In&iacute;cio
+     </a>
+     <a href="fases.html">
+      Fases
+     </a>
+     <a href="direitos.html">
+      Direitos
+     </a>
+     <a href="duvidas.html">
+      D&uacute;vidas
+     </a>
+     <a aria-current="page" href="apoio.html">
+      Apoio
+     </a>
+     <a href="perda.html">
+      Ap&oacute;s uma perda
+     </a>
+    </nav>
+    <button aria-controls="painel-acessibilidade" aria-expanded="false" class="botao-acessibilidade" type="button">
+     Acessibilidade
+    </button>
+   </div>
+  </header>
+  <section aria-label="Prefer&ecirc;ncias de acessibilidade" class="painel-acessibilidade" hidden="" id="painel-acessibilidade">
+   <div class="container painel-acessibilidade-conteudo">
+    <strong>
+     Prefer&ecirc;ncias de acessibilidade
+    </strong>
+    <div class="painel-acessibilidade-opcoes">
+     <button data-tamanho="normal" type="button">
+      Texto normal
+     </button>
+     <button data-tamanho="maior" type="button">
+      Texto maior
+     </button>
+     <button data-tamanho="extra" type="button">
+      Texto extra
+     </button>
+     <button aria-pressed="false" id="alternar-contraste" type="button">
+      Alto contraste
+     </button>
+    </div>
+   </div>
+  </section>
+  <main id="conteudo">
+   <section class="pagina-apresentacao">
+    <details class="descricao-ilustracao">
+     <summary>
+      Sobre a ilustra&ccedil;&atilde;o
+     </summary>
+     <p>
+      Ilustra&ccedil;&atilde;o de m&atilde;os e um ramo delicado, simbolizando apoio.
+     </p>
+    </details>
+    <img alt="Tr&ecirc;s m&atilde;os pr&oacute;ximas de um ramo delicado, representando acolhimento e apoio." class="ornamento-apoio" src="assets/apoio-maos-rede.png" title="Ilustra&ccedil;&atilde;o de m&atilde;os e um ramo delicado, simbolizando apoio."/>
+    <div class="container">
+     <h1>
+      H&aacute; apoio em cada passo da
+      <em>
+       sua jornada.
+      </em>
+     </h1>
+     <p>
+      Receber cuidado tamb&eacute;m &eacute; importante. Encontre orienta&ccedil;&otilde;es sobre rede de apoio, sa&uacute;de emocional,
+rotina e caminhos para buscar ajuda quando precisar.
+     </p>
+     <nav aria-label="Navegar pelos temas de apoio" class="navegacao-fases">
+      <a href="#rede">
+       Rede de apoio
+      </a>
+      <a href="#emocional">
+       Sa&uacute;de emocional
+      </a>
+      <a href="#cotidiano">
+       Dia a dia
+      </a>
+      <a href="#servicos">
+       Onde buscar ajuda
+      </a>
+     </nav>
+    </div>
+   </section>
+
+   <section class="secao-interna" id="rede">
+    <div class="container">
+     <div class="titulo-secao">
+      <div>
+       <p class="etiqueta">
+        Ningu&eacute;m precisa atravessar tudo sozinha.
+       </p>
+       <h2>
+        Rede de apoio
+       </h2>
+      </div>
+     </div>
+     <p class="introducao-secao">
+      Pessoas de confian&ccedil;a e pequenos gestos podem fazer diferen&ccedil;a.
+     </p>
+     <div class="cartilhas-grade">
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Receber a not&iacute;cia de uma s&iacute;ndrome ou condi&ccedil;&atilde;o gen&eacute;tica
+         </strong>
+         <small>
+          Informa&ccedil;&atilde;o, acolhimento e tempo para compreender cada situa&ccedil;&atilde;o.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Uma suspeita ou diagn&oacute;stico pode trazer medo, d&uacute;vidas, tristeza,
+      al&iacute;vio por encontrar respostas ou v&aacute;rios sentimentos ao mesmo tempo.
+      N&atilde;o existe uma rea&ccedil;&atilde;o obrigat&oacute;ria. Seu beb&ecirc; continua sendo uma pessoa
+      &uacute;nica, digna de amor, respeito e oportunidades.
+        </p>
+        <p>
+         As necessidades variam muito de uma crian&ccedil;a para outra, mesmo quando
+      t&ecirc;m a mesma s&iacute;ndrome. Algumas precisam de consultas e terapias
+      frequentes; outras t&ecirc;m demandas diferentes. Evite prever o futuro
+      apenas pelo nome do diagn&oacute;stico.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Pe&ccedil;a que a equipe explique o resultado em linguagem simples e por escrito.
+          </li>
+          <li>
+           Pergunte se &eacute; uma suspeita de rastreamento ou um diagn&oacute;stico confirmado.
+          </li>
+          <li>
+           Solicite orienta&ccedil;&atilde;o sobre especialistas e acompanhamento individualizado.
+          </li>
+          <li>
+           Converse com pessoas de confian&ccedil;a, sem se sentir obrigada a contar a todos imediatamente.
+          </li>
+         </ul>
+        </div>
+        <p>
+         <strong>
+          Fonte:
+         </strong>
+         <a href="https://www.acog.org/womens-health/faqs/prenatal-genetic-diagnostic-tests" rel="noopener noreferrer" target="_blank">
+          ACOG &mdash; exames diagn&oacute;sticos e aconselhamento
+         </a>
+         .
+        </p>
+        <p>
+         Receber uma not&iacute;cia inesperada pode despertar medo, d&uacute;vidas, tristeza ou esperan&ccedil;a ao mesmo tempo. Pe&ccedil;a que a equipe explique o que foi confirmado, o que ainda &eacute; apenas suspeita e quais profissionais podem acompanhar a fam&iacute;lia, sem pressionar decis&otilde;es imediatas.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Onde encontrar apoio e acompanhamento para seu beb&ecirc;?
+         </strong>
+         <small>
+          UBS, equipes especializadas, reabilita&ccedil;&atilde;o e rede de apoio.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Voc&ecirc; n&atilde;o precisa descobrir todos os cuidados sozinha. A Unidade B&aacute;sica
+      de Sa&uacute;de (UBS) pode ajudar a organizar o acompanhamento da crian&ccedil;a e
+      orientar encaminhamentos conforme as necessidades identificadas.
+        </p>
+        <ul>
+         <li>
+          <strong>
+           Acompanhamento de sa&uacute;de:
+          </strong>
+          consultas de rotina,
+        vacina&ccedil;&atilde;o, avalia&ccedil;&atilde;o do desenvolvimento e profissionais especializados
+        quando indicados.
+         </li>
+         <li>
+          <strong>
+           Desenvolvimento e reabilita&ccedil;&atilde;o:
+          </strong>
+          conforme cada caso,
+        podem ser indicados fisioterapia, fonoaudiologia, terapia ocupacional
+        e outros cuidados. O SUS conta com uma rede de aten&ccedil;&atilde;o &agrave; pessoa com
+        defici&ecirc;ncia e Centros Especializados em Reabilita&ccedil;&atilde;o (CER).
+         </li>
+         <li>
+          <strong>
+           Fam&iacute;lia e cotidiano:
+          </strong>
+          dividir tarefas, buscar apoio
+        emocional e conhecer fam&iacute;lias com experi&ecirc;ncias semelhantes pode ajudar.
+        A crian&ccedil;a tamb&eacute;m precisa de brincadeiras, conviv&ecirc;ncia e afeto.
+         </li>
+        </ul>
+        <p>
+         A exist&ecirc;ncia de uma s&iacute;ndrome n&atilde;o significa automaticamente que a
+      crian&ccedil;a precise de todas as terapias. O plano de cuidado deve considerar
+      sua sa&uacute;de, desenvolvimento, contexto e escolhas da fam&iacute;lia.
+        </p>
+        <p>
+         <strong>
+          Fontes:
+         </strong>
+         <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-da-pessoa-com-deficiencia" rel="noopener noreferrer" target="_blank">
+          Minist&eacute;rio da Sa&uacute;de &mdash; sa&uacute;de da pessoa com defici&ecirc;ncia
+         </a>
+         e
+         <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-da-pessoa-com-deficiencia/faq/o-que-e-um-cer" rel="noopener noreferrer" target="_blank">
+          Minist&eacute;rio da Sa&uacute;de &mdash; CER
+         </a>
+         .
+        </p>
+        <p>
+         A UBS pode coordenar encaminhamentos para pediatria, gen&eacute;tica cl&iacute;nica, reabilita&ccedil;&atilde;o e outros servi&ccedil;os quando indicados. Solicite um plano de acompanhamento por escrito e pergunte quais sinais justificam retorno antecipado.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Como construir uma rede de apoio?
+         </strong>
+         <small>
+          Comece pelas pessoas com quem voc&ecirc; se sente segura. Uma rede pode incluir familiares, amizades,
+vizinhos, profissionais de sa&uacute;de e grupos comunit&aacute;rios.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Convide algu&eacute;m para conversar sobre o que voc&ecirc; precisa, sem obriga&ccedil;&atilde;o de aceitar conselhos ou visitas.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Liste duas ou tr&ecirc;s pessoas com quem voc&ecirc; pode contar.
+          </li>
+          <li>
+           Combine uma forma simples de pedir ajuda, como uma mensagem curta.
+          </li>
+          <li>
+           Defina limites claros sobre visitas, coment&aacute;rios e decis&otilde;es pessoais.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Apoio tamb&eacute;m significa dividir tarefas e oferecer descanso, n&atilde;o apenas visitar o beb&ecirc;. Vale
+combinar antecipadamente quem pode ajudar com transporte, alimenta&ccedil;&atilde;o, consultas ou cuidados com
+outras crian&ccedil;as.
+        </p>
+        <p>
+         Uma rede n&atilde;o precisa ser grande: uma pessoa de confian&ccedil;a, uma vizinha, um servi&ccedil;o de sa&uacute;de ou um grupo comunit&aacute;rio j&aacute; podem fazer diferen&ccedil;a. Priorize ajuda concreta e respeitosa, sem cobran&ccedil;as sobre como a fam&iacute;lia deve viver essa fase.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Como pedir ajuda de forma pr&aacute;tica?
+         </strong>
+         <small>
+          Pedidos espec&iacute;ficos facilitam que outras pessoas saibam como contribuir.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Voc&ecirc; pode solicitar uma refei&ccedil;&atilde;o, uma ida &agrave; farm&aacute;cia, companhia em uma consulta ou algu&eacute;m para
+cuidar de tarefas dom&eacute;sticas.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Diga exatamente o que seria &uacute;til e quando.
+          </li>
+          <li>
+           Aceite apenas o apoio que respeita suas escolhas.
+          </li>
+          <li>
+           Lembre que pedir ajuda n&atilde;o diminui sua autonomia.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Experimente pedidos objetivos: &ldquo;Voc&ecirc; pode me acompanhar &agrave; UBS na ter&ccedil;a?&rdquo; ou &ldquo;Consegue trazer uma
+refei&ccedil;&atilde;o pronta?&rdquo;. Pedidos espec&iacute;ficos facilitam que as pessoas saibam como colaborar.
+        </p>
+        <p>
+         Pedidos espec&iacute;ficos costumam ser mais f&aacute;ceis de atender: &ldquo;voc&ecirc; pode trazer uma refei&ccedil;&atilde;o?&rdquo;, &ldquo;pode me acompanhar &agrave; consulta?&rdquo; ou &ldquo;pode ficar com o beb&ecirc; enquanto descanso?&rdquo;. Voc&ecirc; n&atilde;o precisa justificar exaustivamente por que precisa de cuidado.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          E quando n&atilde;o tenho apoio familiar?
+         </strong>
+         <small>
+          Sua rede n&atilde;o precisa ser formada apenas por parentes. Servi&ccedil;os de sa&uacute;de, assist&ecirc;ncia social e
+grupos de conviv&ecirc;ncia tamb&eacute;m podem oferecer acolhimento.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Uma Unidade B&aacute;sica de Sa&uacute;de (UBS) pode orientar sobre servi&ccedil;os dispon&iacute;veis no seu territ&oacute;rio.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Procure a UBS de refer&ecirc;ncia.
+          </li>
+          <li>
+           Pergunte sobre grupos de gestantes e pu&eacute;rperas.
+          </li>
+          <li>
+           Se necess&aacute;rio, busque orienta&ccedil;&atilde;o no CRAS sobre apoio social.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         A UBS e os servi&ccedil;os socioassistenciais podem ajudar a identificar recursos comunit&aacute;rios. Redes
+de apoio tamb&eacute;m podem incluir amizades, vizinhos e grupos de conviv&ecirc;ncia.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Como estabelecer limites sem culpa?
+         </strong>
+         <small>
+          Voc&ecirc; tem o direito de escolher quem participa de momentos &iacute;ntimos e de dizer n&atilde;o a visitas ou
+coment&aacute;rios que causem desconforto.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Uma frase simples pode ajudar: &ldquo;Agrade&ccedil;o o carinho, mas agora precisamos de descanso&rdquo;.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Combine previamente regras de visita com quem mora com voc&ecirc;.
+          </li>
+          <li>
+           Pe&ccedil;a a algu&eacute;m de confian&ccedil;a para ajudar a comunicar os limites.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Voc&ecirc; pode limitar visitas, hor&aacute;rios e exposi&ccedil;&atilde;o do beb&ecirc;. Frases simples como &ldquo;Hoje precisamos
+descansar&rdquo; ajudam a comunicar o que sua fam&iacute;lia necessita.
+        </p>
+       </div>
+      </details>
+     </div>
+     <p class="bloco-dica">
+      Para cuidados em cada etapa, consulte
+      <a href="fases.html">
+       Fases
+      </a>
+      ; para garantias legais, consulte
+      <a href="direitos.html">
+       Direitos
+      </a>
+      .
+     </p>
+    </div>
+   </section>
+
+   <section class="secao-interna secao-fundo" id="emocional">
+    <div class="container">
+     <div class="titulo-secao">
+      <div>
+       <p class="etiqueta">
+        Seus sentimentos tamb&eacute;m merecem cuidado.
+       </p>
+       <h2>
+        Sa&uacute;de emocional
+       </h2>
+      </div>
+     </div>
+     <p class="introducao-secao">
+      Escuta, informa&ccedil;&atilde;o e acompanhamento fazem parte do bem-estar.
+     </p>
+     <div class="cartilhas-grade">
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          &Eacute; normal sentir emo&ccedil;&otilde;es contradit&oacute;rias?
+         </strong>
+         <small>
+          Gesta&ccedil;&atilde;o e p&oacute;s-parto podem reunir alegria, medo, cansa&ccedil;o, irrita&ccedil;&atilde;o e inseguran&ccedil;a. N&atilde;o existe
+uma &uacute;nica maneira correta de sentir.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Se o sofrimento for intenso, persistente ou dificultar sua rotina, vale procurar avalia&ccedil;&atilde;o
+         profissional.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Converse com algu&eacute;m de confian&ccedil;a.
+          </li>
+          <li>
+           Compartilhe suas preocupa&ccedil;&otilde;es no pr&eacute;-natal ou na consulta p&oacute;s-parto.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Sentir alegria e medo ao mesmo tempo n&atilde;o significa falta de amor. Observe se o sofrimento
+permanece, aumenta ou impede atividades importantes, pois nesses casos &eacute; adequado buscar ajuda.
+        </p>
+        <p>
+         &Eacute; poss&iacute;vel amar o beb&ecirc; e, ao mesmo tempo, sentir cansa&ccedil;o, irrita&ccedil;&atilde;o ou saudade da vida anterior. Esses sentimentos n&atilde;o definem seu valor como m&atilde;e ou cuidadora. Se estiverem intensos, persistentes ou dificultarem a rotina, vale buscar avalia&ccedil;&atilde;o.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Como reconhecer que preciso de apoio profissional?
+         </strong>
+         <small>
+          Tristeza persistente, ansiedade intensa, desesperan&ccedil;a, dificuldade importante para dormir mesmo
+quando h&aacute; oportunidade ou perda de interesse nas atividades s&atilde;o motivos para buscar ajuda.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Profissionais da UBS podem fazer uma primeira avalia&ccedil;&atilde;o e orientar o encaminhamento &agrave; rede de
+sa&uacute;de mental.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           N&atilde;o espere chegar ao limite para procurar atendimento.
+          </li>
+          <li>
+           Pe&ccedil;a ajuda para marcar uma consulta ou ir acompanhada, se desejar.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         A equipe pode avaliar sintomas, sono, alimenta&ccedil;&atilde;o, rede de apoio e poss&iacute;veis condi&ccedil;&otilde;es de sa&uacute;de
+mental. Pedir ajuda cedo costuma facilitar o cuidado.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Qual &eacute; a diferen&ccedil;a entre tristeza passageira e depress&atilde;o p&oacute;s-parto?
+         </strong>
+         <small>
+          Oscila&ccedil;&otilde;es emocionais leves nos primeiros dias ap&oacute;s o nascimento podem ocorrer. J&aacute; sintomas
+intensos ou persistentes, especialmente por mais de duas semanas, precisam de avalia&ccedil;&atilde;o.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Somente um profissional pode avaliar e orientar o tratamento adequado.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Se voc&ecirc; sente que n&atilde;o est&aacute; conseguindo lidar, procure atendimento mesmo antes de duas semanas.
+          </li>
+          <li>
+           Se houver risco imediato de ferir a si mesma ou a outra pessoa, procure emerg&ecirc;ncia ou ligue 192.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         O baby blues tende a melhorar em at&eacute; duas semanas. Depress&atilde;o p&oacute;s-parto pode causar tristeza
+persistente, perda de interesse, culpa excessiva e dificuldade para realizar tarefas.
+        </p>
+        <p>
+         Oscila&ccedil;&otilde;es emocionais nos primeiros dias podem acontecer, mas tristeza persistente, desesperan&ccedil;a, ansiedade intensa ou perda de interesse merecem acolhimento profissional. Se houver pensamentos de se machucar ou machucar o beb&ecirc;, procure ajuda imediata e n&atilde;o fique sozinha.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Onde buscar acolhimento emocional?
+         </strong>
+         <small>
+          Voc&ecirc; pode come&ccedil;ar pela UBS, que integra a rede do SUS. Dependendo da necessidade, pode haver
+encaminhamento para outros servi&ccedil;os, como CAPS.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         O CVV oferece apoio emocional gratuito pelo telefone 188, 24 horas por dia, no Brasil.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Em urg&ecirc;ncia de sa&uacute;de, procure UPA, pronto-socorro ou SAMU 192.
+          </li>
+          <li>
+           Para conversar e ser ouvida, ligue 188 ou acesse cvv.org.br.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Voc&ecirc; pode procurar a UBS, pedir avalia&ccedil;&atilde;o e solicitar informa&ccedil;&otilde;es sobre psicologia ou servi&ccedil;os
+especializados. O acesso depende da organiza&ccedil;&atilde;o da rede local.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Baby blues e depress&atilde;o p&oacute;s-parto
+         </strong>
+         <small>
+          Entenda as diferen&ccedil;as e quando buscar atendimento
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+         +
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <h4>
+         O que &eacute; baby blues?
+        </h4>
+        <p>
+         Choro f&aacute;cil, irritabilidade e oscila&ccedil;&otilde;es de humor podem aparecer nos primeiros dias ap&oacute;s o parto
+e geralmente melhoram em at&eacute; duas semanas. Apoio e descanso ajudam, mas sofrimento intenso
+merece aten&ccedil;&atilde;o.
+        </p>
+        <h4>
+         E a depress&atilde;o p&oacute;s-parto?
+        </h4>
+        <p>
+         Pode causar tristeza persistente, perda de interesse, culpa, desesperan&ccedil;a, ansiedade ou
+dificuldade para realizar tarefas. N&atilde;o &eacute; falta de amor nem fraqueza. H&aacute; tratamentos, como
+psicoterapia e medicamentos avaliados individualmente.
+        </p>
+        <h4>
+         Quando &eacute; urgente?
+        </h4>
+        <p>
+         Pensamentos de suic&iacute;dio ou de machucar a si mesma ou o beb&ecirc;, del&iacute;rios, alucina&ccedil;&otilde;es ou confus&atilde;o
+intensa exigem atendimento de emerg&ecirc;ncia. No Brasil, acione o SAMU 192 se houver risco imediato.
+        </p>
+        <p class="cartilha-fonte">
+         Refer&ecirc;ncia institucional:
+         <a href="https://www.gov.br/saude/pt-br" rel="noopener noreferrer" target="_blank">
+          Minist&eacute;rio da Sa&uacute;de
+         </a>
+         . As orienta&ccedil;&otilde;es devem ser individualizadas pela equipe de sa&uacute;de.
+        </p>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Se os sintomas forem intensos, persistirem por mais de duas semanas ou houver dificuldade
+importante para cuidar de si, procure avalia&ccedil;&atilde;o. Confus&atilde;o, alucina&ccedil;&otilde;es ou risco de autoles&atilde;o
+exigem urg&ecirc;ncia.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Ansiedade e depress&atilde;o durante a gesta&ccedil;&atilde;o
+         </strong>
+         <small>
+          Sinais que merecem escuta e cuidado
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+         +
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <h4>
+         O que observar?
+        </h4>
+        <p>
+         Preocupa&ccedil;&atilde;o dif&iacute;cil de controlar, tristeza persistente, medo intenso, perda de interesse e
+sintomas que atrapalham sono, alimenta&ccedil;&atilde;o ou rotina podem indicar necessidade de avalia&ccedil;&atilde;o. Nem
+todo sofrimento emocional se explica por horm&ocirc;nios.
+        </p>
+        <h4>
+         Como pedir ajuda?
+        </h4>
+        <p>
+         Voc&ecirc; pode dizer &agrave; equipe: &ldquo;Tenho me sentido muito preocupada e isso est&aacute; afetando minha rotina&rdquo;.
+A UBS pode orientar avalia&ccedil;&atilde;o e encaminhamento conforme a necessidade.
+        </p>
+        <p class="cartilha-fonte">
+         Refer&ecirc;ncia institucional:
+         <a href="https://www.gov.br/saude/pt-br" rel="noopener noreferrer" target="_blank">
+          Minist&eacute;rio da Sa&uacute;de
+         </a>
+         . As orienta&ccedil;&otilde;es devem ser individualizadas pela equipe de sa&uacute;de.
+        </p>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         A ansiedade pode se manifestar como preocupa&ccedil;&atilde;o constante, medo intenso ou dificuldade de
+dormir; a depress&atilde;o pode envolver perda de interesse e desesperan&ccedil;a. Tratamentos s&atilde;o
+individualizados e podem incluir psicoterapia.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Onde procurar ajuda emocional?
+         </strong>
+         <small>
+          UBS, rede de sa&uacute;de mental e urg&ecirc;ncias
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+         +
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <h4>
+         Por onde come&ccedil;ar?
+        </h4>
+        <p>
+         A UBS &eacute; porta de entrada para conversar sobre ansiedade, tristeza, medo e outras dificuldades.
+Conforme a situa&ccedil;&atilde;o, a rede pode oferecer acompanhamento e encaminhamento aos CAPS ou outros
+servi&ccedil;os.
+        </p>
+        <h4>
+         E em uma crise?
+        </h4>
+        <p>
+         Em risco imediato, procure emerg&ecirc;ncia ou ligue 192. O CVV oferece apoio emocional pelo 188, mas
+n&atilde;o substitui atendimento de urg&ecirc;ncia.
+        </p>
+        <p class="cartilha-fonte">
+         Refer&ecirc;ncia institucional:
+         <a href="https://www.gov.br/saude/pt-br" rel="noopener noreferrer" target="_blank">
+          Minist&eacute;rio da Sa&uacute;de
+         </a>
+         . As orienta&ccedil;&otilde;es devem ser individualizadas pela equipe de sa&uacute;de.
+        </p>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         No SUS, comece pela UBS. Em situa&ccedil;&otilde;es de urg&ecirc;ncia, procure UPA ou emerg&ecirc;ncia. Para risco
+imediato, ligue 192. O CVV atende pelo 188 para escuta emocional.
+        </p>
+        <p>
+         A UBS &eacute; uma porta de entrada para avalia&ccedil;&atilde;o e encaminhamento na rede de sa&uacute;de mental. Em situa&ccedil;&atilde;o de risco imediato, procure uma UPA ou servi&ccedil;o de emerg&ecirc;ncia; para conversar em momentos de sofrimento, o CVV atende pelo 188.
+        </p>
+       </div>
+      </details>
+     </div>
+    </div>
+   </section>
+
+   <section class="secao-interna" id="cotidiano">
+    <div class="container">
+     <div class="titulo-secao">
+      <div>
+       <p class="etiqueta">
+        O cuidado tamb&eacute;m acontece nas pequenas coisas.
+       </p>
+       <h2>
+        Apoio no dia a dia
+       </h2>
+      </div>
+     </div>
+     <p class="introducao-secao">
+      Descanso, alimenta&ccedil;&atilde;o e divis&atilde;o de tarefas ajudam a tornar a rotina mais poss&iacute;vel.
+     </p>
+     <div class="cartilhas-grade">
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Como dividir os cuidados com o beb&ecirc;?
+         </strong>
+         <small>
+          Sempre que poss&iacute;vel, compartilhe tarefas de higiene, organiza&ccedil;&atilde;o, alimenta&ccedil;&atilde;o da fam&iacute;lia e
+acompanhamento de consultas.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Mesmo quando uma pessoa amamenta, outras podem ajudar com o restante da rotina.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Conversem sobre tarefas concretas, n&atilde;o apenas sobre &ldquo;ajudar&rdquo;.
+          </li>
+          <li>
+           Revejam os combinados conforme as necessidades mudarem.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Divida tamb&eacute;m as tarefas invis&iacute;veis: agendar consultas, conferir vacinas, preparar roupas e
+acompanhar a alimenta&ccedil;&atilde;o do beb&ecirc;. Isso evita concentrar toda a responsabilidade em uma pessoa.
+        </p>
+        <p>
+         Compartilhar cuidado inclui alimenta&ccedil;&atilde;o quando poss&iacute;vel, trocas, banho, consultas, tarefas dom&eacute;sticas e aten&ccedil;&atilde;o &agrave; pessoa que se recupera do parto. Fa&ccedil;a combinados realistas e revise a divis&atilde;o quando a rotina mudar.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Como organizar visitas no p&oacute;s-parto?
+         </strong>
+         <small>
+          Visitas devem respeitar o descanso, a recupera&ccedil;&atilde;o e as prefer&ecirc;ncias da fam&iacute;lia. Voc&ecirc; pode
+limitar hor&aacute;rios, dura&ccedil;&atilde;o e quantidade de pessoas.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Quem visita tamb&eacute;m pode contribuir levando uma refei&ccedil;&atilde;o ou ajudando com tarefas, sem exigir que
+a pessoa no p&oacute;s-parto receba ou entretenha convidados.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Evite visitas de pessoas doentes.
+          </li>
+          <li>
+           Pe&ccedil;a higiene das m&atilde;os antes de tocar no beb&ecirc;.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Combine visitas curtas e respeite o sono da fam&iacute;lia. Pessoas doentes devem adiar o contato com o
+rec&eacute;m-nascido; higiene das m&atilde;os &eacute; importante.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          O que fazer quando estou muito cansada?
+         </strong>
+         <small>
+          O cansa&ccedil;o pode se acumular. Tente identificar momentos poss&iacute;veis de descanso e pe&ccedil;a a algu&eacute;m
+para assumir tarefas n&atilde;o essenciais.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Se houver exaust&atilde;o extrema, tontura, fraqueza intensa ou sintomas emocionais importantes,
+procure avalia&ccedil;&atilde;o de sa&uacute;de.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Priorize necessidades b&aacute;sicas e reduza cobran&ccedil;as.
+          </li>
+          <li>
+           Aceite ajuda para refei&ccedil;&otilde;es e tarefas dom&eacute;sticas.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Sono insuficiente pode intensificar irritabilidade e ansiedade. Se houver exaust&atilde;o extrema,
+desmaios, tristeza persistente ou incapacidade de descansar mesmo com ajuda, procure avalia&ccedil;&atilde;o.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Como acolher algu&eacute;m que acabou de ter um beb&ecirc;?
+         </strong>
+         <small>
+          Ou&ccedil;a antes de aconselhar. Pergunte o que seria &uacute;til e respeite as escolhas da pessoa.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Oferecer presen&ccedil;a sem julgamentos costuma ser mais valioso do que comparar experi&ecirc;ncias.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Pergunte &ldquo;do que voc&ecirc; precisa hoje?&rdquo;.
+          </li>
+          <li>
+           Evite coment&aacute;rios sobre corpo, amamenta&ccedil;&atilde;o ou modo de cuidar.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Evite compara&ccedil;&otilde;es ou cobran&ccedil;as. Ofere&ccedil;a ajuda concreta, escute e pergunte antes de tocar no beb&ecirc;
+ou dar conselhos.
+        </p>
+       </div>
+      </details>
+     </div>
+    </div>
+   </section>
+
+   <section class="secao-interna secao-fundo" id="servicos">
+    <div class="container">
+     <div class="titulo-secao">
+      <div>
+       <p class="etiqueta">
+        Voc&ecirc; n&atilde;o precisa descobrir tudo sozinha.
+       </p>
+       <h2>
+        Onde buscar ajuda
+       </h2>
+      </div>
+     </div>
+     <p class="introducao-secao">
+      Conhe&ccedil;a portas de entrada para acolhimento e prote&ccedil;&atilde;o no Brasil.
+     </p>
+     <div class="cartilhas-grade">
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Unidade B&aacute;sica de Sa&uacute;de (UBS)
+         </strong>
+         <small>
+          &Eacute; uma porta de entrada para pr&eacute;-natal, acompanhamento p&oacute;s-parto, vacina&ccedil;&atilde;o, orienta&ccedil;&otilde;es e
+avalia&ccedil;&atilde;o de sa&uacute;de f&iacute;sica e emocional.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Procure a UBS mais pr&oacute;xima para saber quais atendimentos est&atilde;o dispon&iacute;veis.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Leve documentos e cart&atilde;o do SUS, se tiver; a aus&ecirc;ncia deles n&atilde;o deve impedir atendimento de urg&ecirc;ncia.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Na UBS &eacute; poss&iacute;vel solicitar acompanhamento de gesta&ccedil;&atilde;o, puerp&eacute;rio, vacina&ccedil;&atilde;o, puericultura e
+avalia&ccedil;&atilde;o inicial de sa&uacute;de mental. Leve o cart&atilde;o do SUS, se tiver, mas procure orienta&ccedil;&atilde;o mesmo
+sem ele.
+        </p>
+        <p>
+         A UBS pode orientar sobre pr&eacute;-natal, puerp&eacute;rio, vacina&ccedil;&atilde;o, sa&uacute;de mental, planejamento reprodutivo e encaminhamentos. Leve documentos e cadernetas de sa&uacute;de quando dispon&iacute;veis, mas n&atilde;o deixe de buscar atendimento urgente por falta deles.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          CRAS e assist&ecirc;ncia social
+         </strong>
+         <small>
+          O Centro de Refer&ecirc;ncia de Assist&ecirc;ncia Social (CRAS) orienta fam&iacute;lias sobre servi&ccedil;os e benef&iacute;cios
+socioassistenciais, conforme crit&eacute;rios locais.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         &Eacute; um ponto de apoio especialmente &uacute;til quando h&aacute; dificuldades financeiras ou fragilidade na rede
+familiar.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Consulte o CRAS do seu territ&oacute;rio para informa&ccedil;&otilde;es atualizadas.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         O CRAS pode orientar sobre servi&ccedil;os e benef&iacute;cios socioassistenciais, conforme crit&eacute;rios de
+acesso. Verifique a unidade de refer&ecirc;ncia no territ&oacute;rio.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Situa&ccedil;&otilde;es de viol&ecirc;ncia ou amea&ccedil;a
+         </strong>
+         <small>
+          Se voc&ecirc; sofre viol&ecirc;ncia, n&atilde;o precisa enfrentar isso sozinha. A Central de Atendimento &agrave; Mulher &mdash;
+Ligue 180 &mdash; oferece orienta&ccedil;&atilde;o e informa&ccedil;&otilde;es sobre servi&ccedil;os de prote&ccedil;&atilde;o no Brasil.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         Em situa&ccedil;&atilde;o de perigo imediato, ligue 190.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Se for seguro, procure uma pessoa ou servi&ccedil;o de confian&ccedil;a.
+          </li>
+          <li>
+           Preserve sua seguran&ccedil;a ao buscar informa&ccedil;&otilde;es e apoio.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Se houver amea&ccedil;a ou viol&ecirc;ncia, priorize sua seguran&ccedil;a. A rede de sa&uacute;de, assist&ecirc;ncia social e
+prote&ccedil;&atilde;o pode orientar medidas adequadas; em perigo imediato, acione a emerg&ecirc;ncia.
+        </p>
+       </div>
+      </details>
+
+      <details class="cartilha">
+       <summary class="cartilha-titulo">
+        <span>
+         <strong>
+          Quando procurar ajuda urgente?
+         </strong>
+         <small>
+          Busque atendimento imediato em caso de falta de ar, dor forte no peito, sangramento intenso,
+convuls&otilde;es, desmaio, pensamentos de autoagress&atilde;o ou risco de machucar algu&eacute;m.
+         </small>
+        </span>
+        <span aria-hidden="true" class="cartilha-icone">
+        </span>
+       </summary>
+       <div class="cartilha-conteudo">
+        <p>
+         O SAMU atende pelo n&uacute;mero 192 no Brasil.
+        </p>
+        <div class="cartilha-perguntas">
+         <strong>
+          Na pr&aacute;tica:
+         </strong>
+         <ul>
+          <li>
+           Em emerg&ecirc;ncia, ligue 192 ou v&aacute; ao servi&ccedil;o de urg&ecirc;ncia.
+          </li>
+          <li>
+           N&atilde;o espere por uma resposta em redes sociais ou por este site.
+          </li>
+         </ul>
+        </div>
+        <h4>
+         Para entender melhor
+        </h4>
+        <p>
+         Sangramento intenso, falta de ar, dor no peito, convuls&otilde;es e pensamentos de autoles&atilde;o com risco
+imediato exigem avalia&ccedil;&atilde;o urgente. N&atilde;o espere uma consulta agendada.
+        </p>
+       </div>
+      </details>
+     </div>
+    </div>
+   </section>
+
+   <section class="secao-interna" id="fontes">
+    <div class="container">
+     <div class="titulo-secao">
+      <div>
+       <p class="etiqueta">
+        INFORMA&Ccedil;&Atilde;O E ACOLHIMENTO
+       </p>
+       <h2>
+        Fontes e servi&ccedil;os &uacute;teis
+       </h2>
+      </div>
+     </div>
+
+     <div class="fontes-jornada">
+      <p>
+       As orienta&ccedil;&otilde;es s&atilde;o educativas e se referem principalmente &agrave; rede de atendimento brasileira. Para
+informa&ccedil;&otilde;es atualizadas, consulte os canais oficiais:
+      </p>
+      <ul>
+       <li>
+        <a href="https://www.gov.br/saude/pt-br" rel="noopener noreferrer" target="_blank">
+         Minist&eacute;rio da Sa&uacute;de
+        </a>
+        &mdash; informa&ccedil;&otilde;es sobre o SUS e cuidados em sa&uacute;de.
+       </li>
+       <li>
+        <a href="https://www.gov.br/mds/pt-br" rel="noopener noreferrer" target="_blank">
+         Minist&eacute;rio do Desenvolvimento e Assist&ecirc;ncia Social
+        </a>
+        &mdash; assist&ecirc;ncia social e CRAS.
+       </li>
+       <li>
+        <a href="https://www.cvv.org.br/" rel="noopener noreferrer" target="_blank">
+         Centro de Valoriza&ccedil;&atilde;o da Vida (CVV)
+        </a>
+        &mdash; apoio emocional pelo 188.
+       </li>
+       <li>
+        <a href="https://www.gov.br/mulheres/pt-br" rel="noopener noreferrer" target="_blank">
+         Minist&eacute;rio das Mulheres
+        </a>
+        &mdash; informa&ccedil;&otilde;es sobre o Ligue 180.
+       </li>
+      </ul>
+      <p>
+       <strong>
+        Em caso de emerg&ecirc;ncia no Brasil:
+       </strong>
+       SAMU 192; Pol&iacute;cia Militar 190. Este site n&atilde;o substitui atendimento de sa&uacute;de ou apoio
+profissional individualizado.
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="rodape">
+   <div class="container">
+    <p class="rodape-logo">
+     jornada.
+    </p>
+    <p>
+     Conte&uacute;do educativo e acolhedor. N&atilde;o substitui atendimento profissional.
+    </p>
+   </div>
+  </footer>
+  <button aria-label="Voltar ao topo da p&aacute;gina" class="voltar-topo" id="voltar-topo" title="Voltar ao topo" type="button">
+   <svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22">
+    <path d="M12 19V5">
+    </path>
+    <path d="m5 12 7-7 7 7">
+    </path>
+   </svg>
+  </button>
+ </body>
+</html>

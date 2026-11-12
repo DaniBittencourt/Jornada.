@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Jornada: um espa&ccedil;o acolhedor para entender a gesta&ccedil;&atilde;o, o parto, o p&oacute;s-parto, conhecer seus direitos e encontrar apoio." name="description"/>
+  <title>
+   Jornada | Informa&ccedil;&atilde;o e acolhimento
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <script defer="" src="js/main.js">
+  </script>
+ </head>
+ <body>
+  <a class="pular-conteudo" href="#conteudo">
+   Pular para o conte&uacute;do
+  </a>
+  <header class="topo">
+   <div class="container cabecalho">
+    <a class="logo" href="index.html">
+     jornada
+     <span>
+      .
+     </span>
+    </a>
+    <nav aria-label="Menu principal" class="menu">
+     <a aria-current="page" href="index.html">
+      In&iacute;cio
+     </a>
+     <a href="fases.html">
+      Fases
+     </a>
+     <a href="direitos.html">
+      Direitos
+     </a>
+     <a href="duvidas.html">
+      D&uacute;vidas
+     </a>
+     <a href="apoio.html">
+      Apoio
+     </a>
+     <a href="perda.html">
+      Ap&oacute;s uma perda
+     </a>
+    </nav>
+    <button aria-controls="painel-acessibilidade" aria-expanded="false" class="botao-acessibilidade" type="button">
+     Acessibilidade
+    </button>
+   </div>
+  </header>
+  <section aria-label="Prefer&ecirc;ncias de acessibilidade" class="painel-acessibilidade" hidden="" id="painel-acessibilidade">
+   <div class="container painel-acessibilidade-conteudo">
+    <strong>
+     Prefer&ecirc;ncias de acessibilidade
+    </strong>
+    <div class="painel-acessibilidade-opcoes">
+     <button data-tamanho="normal" type="button">
+      Texto normal
+     </button>
+     <button data-tamanho="maior" type="button">
+      Texto maior
+     </button>
+     <button data-tamanho="extra" type="button">
+      Texto extra
+     </button>
+     <button aria-pressed="false" id="alternar-contraste" type="button">
+      Alto contraste
+     </button>
+    </div>
+   </div>
+  </section>
+  <main id="conteudo">
+   <section class="hero">
+    <details class="descricao-ilustracao">
+     <summary>
+      Sobre a ilustra&ccedil;&atilde;o
+     </summary>
+     <p>
+      Ilustra&ccedil;&atilde;o em aquarela sobre cuidado e maternidade.
+     </p>
+    </details>
+
+    <div class="container hero-conteudo">
+     <div class="hero-texto">
+      <p class="etiqueta">
+       INFORMA&Ccedil;&Atilde;O, CUIDADO E ACOLHIMENTO
+      </p>
+      <h1>
+       Toda jornada merece
+       <em>
+        ser acolhida.
+       </em>
+      </h1>
+      <p class="hero-descricao">
+       Informa&ccedil;&otilde;es claras e acolhedoras sobre gesta&ccedil;&atilde;o, parto, p&oacute;s-parto, direitos e redes de apoio, para voc&ecirc; conhecer possibilidades, preparar perguntas e tomar decis&otilde;es junto &agrave; equipe de sa&uacute;de.
+      </p>
+      <div class="hero-botoes">
+       <a class="botao botao-primario" href="fases.html">
+        Explorar a jornada
+       </a>
+       <a class="botao botao-secundario" href="duvidas.html">
+        Tirar minhas d&uacute;vidas
+       </a>
+      </div>
+     </div>
+
+     <div class="hero-imagem">
+      <img alt="Ilustra&ccedil;&atilde;o acolhedora que representa a maternidade e o cuidado durante a jornada." src="assets/ilustracao-jornada.png" title="Ilustra&ccedil;&atilde;o em aquarela sobre cuidado e maternidade."/>
+     </div>
+    </div>
+   </section>
+
+   <section aria-labelledby="titulo-busca" class="secao-busca">
+    <div class="container busca-conteudo">
+     <p class="etiqueta">
+      ENCONTRE O QUE PRECISA
+     </p>
+     <h2 id="titulo-busca">
+      O que voc&ecirc; gostaria de saber?
+     </h2>
+     <p>
+      Pesquise um assunto e encontre informa&ccedil;&otilde;es
+          dispon&iacute;veis no Jornada.
+     </p>
+     <form class="form-busca" id="form-busca" role="search">
+      <label class="sr-only" for="campo-busca">
+       Pesquisar assuntos
+      </label>
+      <input autocomplete="off" id="campo-busca" name="busca" placeholder="Ex.: parto, direitos, amamenta&ccedil;&atilde;o..." required="" type="search"/>
+      <button type="submit">
+       Buscar
+      </button>
+     </form>
+     <div aria-live="polite" class="resultados-busca" id="resultados-busca">
+     </div>
+    </div>
+   </section>
+
+   <section class="secao-interna" id="sobre">
+    <div class="container">
+     <div class="titulo-secao">
+      <div>
+       <p class="etiqueta">
+        UM ESPA&Ccedil;O PARA VOC&Ecirc;
+       </p>
+       <h2>
+        Nossos ideais
+       </h2>
+      </div>
+     </div>
+     <p class="introducao-secao">
+      O Jornada &eacute; um guia educativo criado
+          para tornar informa&ccedil;&otilde;es sobre gesta&ccedil;&atilde;o,
+          nascimento e p&oacute;s-parto mais acess&iacute;veis,
+          compreens&iacute;veis e acolhedoras.
+     </p>
+     <div class="grade-interna">
+      <article class="card-interno">
+       <p class="etiqueta">
+        INFORMA&Ccedil;&Atilde;O
+       </p>
+       <h3>
+        Entender para decidir
+       </h3>
+       <p>
+        Explicamos assuntos importantes
+              em linguagem simples, sem deixar
+              de lado os cuidados e as informa&ccedil;&otilde;es
+              necess&aacute;rias para decis&otilde;es conscientes.
+       </p>
+      </article>
+
+      <article class="card-interno">
+       <p class="etiqueta">
+        ACOLHIMENTO
+       </p>
+       <h3>
+        Respeito a cada experi&ecirc;ncia
+       </h3>
+       <p>
+        Cada gravidez e cada fam&iacute;lia
+              vivem realidades diferentes.
+              Aqui, suas d&uacute;vidas s&atilde;o tratadas
+              com respeito e sem julgamentos.
+       </p>
+      </article>
+
+      <article class="card-interno">
+       <p class="etiqueta">
+        AUTONOMIA
+       </p>
+       <h3>
+        Sua voz importa
+       </h3>
+       <p>
+        Conhecer op&ccedil;&otilde;es, fazer perguntas
+              e compreender seus direitos
+              s&atilde;o partes importantes
+              de um cuidado respeitoso.
+       </p>
+      </article>
+     </div>
+
+     <div class="nota-interna">
+      <strong>
+       Para quem &eacute; o Jornada?
+      </strong>
+      <p>
+       Para gestantes, pessoas no p&oacute;s-parto,
+            adolescentes, familiares, acompanhantes
+            e todas as pessoas que desejam compreender
+            melhor essa etapa da vida.
+      </p>
+     </div>
+    </div>
+   </section>
+
+   <section class="secao-interna secao-fundo" id="explorar">
+    <div class="container">
+     <div class="titulo-secao">
+      <div>
+       <p class="etiqueta">
+        EXPLORE
+       </p>
+       <h2>
+        Escolha por onde come&ccedil;ar
+       </h2>
+      </div>
+     </div>
+     <p class="introducao-secao">
+      Voc&ecirc; n&atilde;o precisa saber tudo de uma vez.
+          Escolha o assunto que faz sentido
+          para o seu momento e descubra
+          as informa&ccedil;&otilde;es no seu ritmo.
+     </p>
+     <div class="grade-interna">
+      <article class="card-interno">
+       <p class="etiqueta">
+        CONHECIMENTO
+       </p>
+       <h3>
+        Fases da jornada
+       </h3>
+       <p>
+        Entenda as mudan&ccedil;as da gesta&ccedil;&atilde;o,
+              as possibilidades de parto,
+              a recupera&ccedil;&atilde;o p&oacute;s-parto
+              e os cuidados com a sa&uacute;de emocional.
+       </p>
+       <p>
+        As cartilhas podem ser abertas
+              individualmente, para voc&ecirc; ler
+              apenas o assunto que procura.
+       </p>
+       <a class="link-interno" href="fases.html">
+        Conhecer as fases
+       </a>
+      </article>
+
+      <article class="card-interno">
+       <p class="etiqueta">
+        AUTONOMIA
+       </p>
+       <h3>
+        Seus direitos
+       </h3>
+       <p>
+        Saiba o que significa consentimento
+              informado, como participar
+              das decis&otilde;es e quais garantias
+              existem durante o atendimento.
+       </p>
+       <p>
+        Encontre exemplos pr&aacute;ticos
+              para reconhecer situa&ccedil;&otilde;es
+              de desrespeito e buscar orienta&ccedil;&atilde;o.
+       </p>
+       <a class="link-interno" href="direitos.html">
+        Conhecer meus direitos
+       </a>
+      </article>
+
+      <article class="card-interno">
+       <p class="etiqueta">
+        RESPOSTAS
+       </p>
+       <h3>
+        D&uacute;vidas reais
+       </h3>
+       <p>
+        Encontre respostas sobre enjoos,
+              exames, horm&ocirc;nios, trabalho,
+              decis&otilde;es sobre o parto,
+              amamenta&ccedil;&atilde;o e vida em fam&iacute;lia.
+       </p>
+       <p>
+        Tamb&eacute;m h&aacute; orienta&ccedil;&otilde;es para
+              adolescentes e familiares
+              que est&atilde;o vivendo uma gravidez.
+       </p>
+       <a class="link-interno" href="duvidas.html">
+        Explorar as d&uacute;vidas
+       </a>
+      </article>
+
+      <article class="card-interno">
+       <p class="etiqueta">
+        ACOLHIMENTO
+       </p>
+       <h3>
+        Onde buscar apoio
+       </h3>
+       <p>
+        Descubra como procurar atendimento
+              pelo SUS, apoio psicol&oacute;gico,
+              orienta&ccedil;&atilde;o social e ajuda
+              em situa&ccedil;&otilde;es de viol&ecirc;ncia.
+       </p>
+       <p>
+        Conhe&ccedil;a servi&ccedil;os, contatos
+              importantes e maneiras pr&aacute;ticas
+              de pedir ajuda.
+       </p>
+       <a class="link-interno" href="apoio.html">
+        Encontrar apoio
+       </a>
+      </article>
+
+      <article class="card-interno">
+       <p class="etiqueta">
+        ACOLHIMENTO
+       </p>
+       <h3>
+        Acolhimento ap&oacute;s uma perda
+       </h3>
+       <p>
+        Um espa&ccedil;o dedicado a quem viveu
+              uma perda gestacional, fetal ou neonatal.
+       </p>
+       <p>
+        Encontre informa&ccedil;&otilde;es sobre recupera&ccedil;&atilde;o,
+              luto, direitos e caminhos de apoio,
+              respeitando seu tempo e sua hist&oacute;ria.
+       </p>
+       <a class="link-interno" href="perda.html">
+        Encontrar acolhimento
+       </a>
+      </article>
+     </div>
+    </div>
+   </section>
+
+   <section class="secao-interna secao-fundo" id="cuidados">
+    <div class="container">
+     <div class="titulo-secao">
+      <div>
+       <p class="etiqueta">
+        INFORMA&Ccedil;&Atilde;O COM RESPONSABILIDADE
+       </p>
+       <h2>
+        O cuidado vai al&eacute;m da tela
+       </h2>
+      </div>
+     </div>
+     <p class="introducao-secao">
+      O Jornada ajuda voc&ecirc; a compreender
+          informa&ccedil;&otilde;es e formular perguntas,
+          mas n&atilde;o substitui o acompanhamento
+          de profissionais de sa&uacute;de.
+     </p>
+     <div class="grade-interna">
+      <article class="card-interno">
+       <h3>
+        Informa&ccedil;&otilde;es fundamentadas
+       </h3>
+       <p>
+        Nossos conte&uacute;dos utilizam
+              refer&ecirc;ncias de institui&ccedil;&otilde;es
+              como o Minist&eacute;rio da Sa&uacute;de
+              e a Organiza&ccedil;&atilde;o Mundial da Sa&uacute;de.
+       </p>
+       <p>
+        As p&aacute;ginas informativas incluem
+              links para consulta das fontes.
+       </p>
+      </article>
+
+      <article class="card-interno">
+       <h3>
+        Orienta&ccedil;&otilde;es individualizadas
+       </h3>
+       <p>
+        Cada gesta&ccedil;&atilde;o possui caracter&iacute;sticas
+              pr&oacute;prias. Exames, tratamentos
+              e decis&otilde;es devem considerar
+              sua situa&ccedil;&atilde;o cl&iacute;nica.
+       </p>
+      </article>
+
+      <article class="card-interno">
+       <h3>
+        Ajuda quando necess&aacute;rio
+       </h3>
+       <p>
+        Se surgir um sintoma preocupante,
+              procure um servi&ccedil;o de sa&uacute;de.
+              Em situa&ccedil;&otilde;es graves, n&atilde;o espere
+              a pr&oacute;xima consulta.
+       </p>
+      </article>
+     </div>
+
+     <div class="nota-interna">
+      <strong>
+       Precisa de atendimento urgente?
+      </strong>
+      <p>
+       No Brasil, o SAMU atende pelo
+       <strong>
+        192
+       </strong>
+       .
+            Se houver uma emerg&ecirc;ncia de sa&uacute;de,
+            procure atendimento imediatamente.
+      </p>
+      <p>
+       <a href="apoio.html#urgencias">
+        Veja os sinais de alerta e contatos &uacute;teis.
+       </a>
+      </p>
+     </div>
+    </div>
+   </section>
+
+   <section class="faixa-acolhimento">
+    <div class="container faixa-conteudo">
+     <div>
+      <h2>
+       A sua jornada n&atilde;o precisa ser solit&aacute;ria.
+      </h2>
+      <p>
+       Voc&ecirc; merece informa&ccedil;&atilde;o,
+            acolhimento e cuidado
+            em cada etapa.
+      </p>
+     </div>
+     <a class="botao botao-primario" href="fases.html">
+      Come&ccedil;ar minha jornada
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer class="rodape">
+   <div class="container">
+    <p class="rodape-logo">
+     jornada.
+    </p>
+    <p>
+     Conte&uacute;do educativo. N&atilde;o substitui
+        atendimento m&eacute;dico ou orienta&ccedil;&atilde;o jur&iacute;dica.
+    </p>
+   </div>
+  </footer>
+  <button aria-label="Voltar ao topo da p&aacute;gina" class="voltar-topo" id="voltar-topo" title="Voltar ao topo" type="button">
+   <svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22">
+    <path d="M12 19V5">
+    </path>
+    <path d="m5 12 7-7 7 7">
+    </path>
+   </svg>
+  </button>
+ </body>
+</html>
