@@ -1416,6 +1416,7 @@ summary:focus-visible {
 
 }
 
+.cartilha-conteudo h3,
 .cartilha-conteudo h4 {
 
   margin: 22px 0 8px;
@@ -1826,7 +1827,6 @@ summary:focus-visible {
 
 }
 
-
 /* Ajustes integrados de consistência */
 .pagina-apresentacao p:not(.etiqueta) {
   max-width: 750px;
@@ -2011,7 +2011,7 @@ summary:focus-visible {
   position:relative; display:grid; place-items:center; flex:0 0 34px;
   width:34px; height:34px; padding:0; border-radius:50%;
   background:#e8ede5; color:#536c55;
-  font-size:0; line-height:0; 
+  font-size:0; line-height:0;
   transition:transform .2s;
 }
 
@@ -2030,7 +2030,8 @@ summary:focus-visible {
 
 .pagina-fases .cartilha-conteudo {border-top:1px solid #edf0e9;padding:8px 27px 27px;line-height:1.8;color:#49544a;overflow-wrap:anywhere;}
 
-.pagina-fases .cartilha-conteudo h4 {margin:22px 0 8px;color:#4e6952;font-size:1rem;}
+.pagina-fases .cartilha-conteudo h3,
+.cartilha-conteudo h4 {margin:22px 0 8px;color:#4e6952;font-size:1rem;}
 
 .pagina-fases .cartilha-conteudo p,.pagina-fases .cartilha-conteudo ul {margin:0 0 14px;}
 
@@ -2094,8 +2095,6 @@ summary:focus-visible {
 
 .pagina-fases .orientacao-cartilhas p:last-child { margin-bottom: 0; }
 
-
-
 /* Estilos exclusivos do checklist da página Fases */
 .cartilha-checklist{display:grid;gap:.55rem;margin:1rem 0 1.25rem}
 
@@ -2106,7 +2105,6 @@ summary:focus-visible {
 .cartilha-checklist input:checked+span{text-decoration:line-through;opacity:.7}
 
 .cartilha-checklist input:focus-visible{outline:3px solid #a36340;outline-offset:3px}
-
 
 /* Orientação antes das cartilhas */
 .pagina-fases .orientacao-cartilhas {
@@ -2135,7 +2133,6 @@ summary:focus-visible {
   .pagina-fases .orientacao-cartilhas + .secao-interna { padding-top: 50px; }
 }
 
-
 /* Checklist do pré-natal: integrado às cartilhas existentes */
 .cartilha-checklist{display:grid;gap:.55rem;margin:1rem 0 1.25rem}
 
@@ -2146,9 +2143,6 @@ summary:focus-visible {
 .cartilha-checklist input:checked+span{text-decoration:line-through;opacity:.7}
 
 .cartilha-checklist input:focus-visible{outline:3px solid #a36340;outline-offset:3px}
-
-
-
 
 /* Ilustração inicial com transparência uniforme */
 .hero-imagem img { opacity: .72; }
@@ -2170,8 +2164,8 @@ summary:focus-visible {
 
 .checklist-jornada input:checked + span { text-decoration: line-through; opacity: .7; }
 
-
 /* Ajustes aprovados: apresentação e acessibilidade */
+
 /* A página Início permanece maior e mais destacada. */
 .hero-conteudo { min-height: 600px; }
 
@@ -2217,7 +2211,7 @@ summary:focus-visible {
 
 .painel-acessibilidade-opcoes button[aria-pressed="true"] { background: var(--verde-escuro); color: white; }
 
-button:focus-visible, input:focus-visible, .descricao-ilustracao summary:focus-visible {
+button:focus-visible, input:focus-visible {
   outline: 3px solid #6d3d2c; outline-offset: 3px;
 }
 
@@ -2227,29 +2221,6 @@ html.texto-extra { font-size: 125%; }
 
 /* Texto pequeno terracota mais escuro; a paleta decorativa é preservada. */
 .menu a:hover, .menu a[aria-current="page"], .logo span { color: #83513f; }
-
-/* Descrição opcional: funciona com mouse, teclado e toque. */
-.hero, .pagina-apresentacao { position: relative; }
-
-.descricao-ilustracao {
-  position: absolute; bottom: 10px; right: max(5%, calc((100vw - 1320px) / 2));
-  z-index: 8; max-width: min(340px, 85vw); font-size: .85rem;
-}
-
-.descricao-ilustracao summary {
-  display: inline-block; cursor: pointer; padding: 5px 10px;
-  background: #fffdf9; color: #304536; border: 1px solid #819586;
-  border-radius: 8px; list-style: none;
-}
-
-.descricao-ilustracao summary::-webkit-details-marker { display: none; }
-
-.descricao-ilustracao p {
-  padding: 9px 12px; margin-top: 5px; background: #fffdf9;
-  color: #304536; border: 1px solid #819586; border-radius: 8px;
-}
-
-/* A descrição também pode ser aberta ao clicar no texto. */
 
 /* Alto contraste opcional: não muda o tema original quando desligado. */
 html.alto-contraste body { color: #111 !important; background: #fff !important; }
@@ -2280,7 +2251,6 @@ html.alto-contraste .form-busca button { color: white !important; background: #1
   .hero-conteudo { min-height: 0; }
   .hero-texto h1 { font-size: clamp(2.8rem, 9vw, 4rem); }
   .pagina-fases .pagina-apresentacao { padding: 42px 0; }
-  .descricao-ilustracao { right: 5%; bottom: 8px; }
 }
 
 /* Permite visualizar a descrição nativa ao passar o mouse na imagem. */
@@ -2297,9 +2267,6 @@ html.alto-contraste .form-busca button { color: white !important; background: #1
 @media (max-width: 700px) {
   .pagina-fases .pagina-apresentacao { padding: 38px 0; }
 }
-
-
-
 
 /* Refinamento solicitado: cabeçalhos e cores das páginas. */
 .hero-texto h1 {
@@ -2338,11 +2305,6 @@ body.pagina-perda .pagina-apresentacao {
   font-size: .78rem;
 }
 
-/* Descrição da ilustração junto à borda direita. */
-.descricao-ilustracao {
-  right: 12px;
-}
-
 @media (max-width: 700px) {
   .hero-texto h1 {
     font-size: clamp(2.5rem, 8vw, 3.5rem);
@@ -2364,8 +2326,6 @@ body.pagina-perda .pagina-apresentacao {
     font-size: clamp(2rem, 6vw, 2.65rem);
   }
 
-
-
   .cabecalho {
     min-height: 0;
     padding-bottom: 48px;
@@ -2375,12 +2335,7 @@ body.pagina-perda .pagina-apresentacao {
     right: 0;
     bottom: 8px;
   }
-
-  .descricao-ilustracao {
-    right: 8px;
-  }
 }
-
 
 /* Ajustes finais solicitados: menu, apresentação e cartilhas */
 
@@ -2493,6 +2448,7 @@ body.pagina-fases .cartilha-titulo strong {
     padding-bottom: 15px;
     gap: 10px;
   }
+
   .cabecalho .menu { gap: 12px; }
   .cabecalho .botao-acessibilidade { margin-left: 6px; }
 }
@@ -2517,4 +2473,30 @@ body.pagina-fases .cartilha-titulo strong {
 
   .cabecalho .menu::after { height: 20px; }
   .cabecalho .botao-acessibilidade { margin-left: 0; }
+}
+
+/* Descrições das ilustrações: mouse e teclado, sem botão adicional. */
+.hero-imagem img[data-descricao],
+.pagina-apresentacao img[data-descricao] {
+  pointer-events: auto !important;
+}
+
+.hero-imagem img[data-descricao]:focus-visible,
+.pagina-apresentacao img[data-descricao]:focus-visible {
+  outline: 3px solid #6d3d2c;
+  outline-offset: 5px;
+}
+
+.tooltip-ilustracao {
+  position: fixed;
+  z-index: 9999;
+  max-width: min(320px, calc(100vw - 24px));
+  padding: 10px 14px;
+  border: 1px solid #819586;
+  border-radius: 9px;
+  background: #fffdf9;
+  color: #304536;
+  font: 500 0.875rem/1.5 'DM Sans', Arial, sans-serif;
+  box-shadow: 0 4px 14px rgba(35, 48, 39, .14);
+  pointer-events: none;
 }

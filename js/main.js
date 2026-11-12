@@ -1,6 +1,56 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  // Descrição das ilustrações ao passar o mouse ou usar o teclado.
+  const ilustracoes = document.querySelectorAll("img[data-descricao]");
+
+  if (ilustracoes.length) {
+    const dica = document.createElement("div");
+    dica.className = "tooltip-ilustracao";
+    dica.id = "descricao-imagem-ativa";
+    dica.setAttribute("role", "tooltip");
+    dica.hidden = true;
+    document.body.appendChild(dica);
+
+    const posicionarDica = (imagem) => {
+      const area = imagem.getBoundingClientRect();
+      const largura = dica.offsetWidth;
+      const altura = dica.offsetHeight;
+      const centro = area.left + area.width / 2;
+      const esquerda = Math.max(12, Math.min(centro - largura / 2, window.innerWidth - largura - 12));
+      const acima = area.top - altura - 10;
+      const topo = acima >= 12 ? acima : Math.min(area.bottom + 10, window.innerHeight - altura - 12);
+      dica.style.left = `${esquerda}px`;
+      dica.style.top = `${Math.max(12, topo)}px`;
+    };
+
+    const mostrarDica = (imagem) => {
+      dica.textContent = imagem.dataset.descricao;
+      dica.hidden = false;
+      imagem.setAttribute("aria-describedby", dica.id);
+      posicionarDica(imagem);
+    };
+
+    const ocultarDica = (imagem) => {
+      dica.hidden = true;
+      imagem.removeAttribute("aria-describedby");
+    };
+
+    ilustracoes.forEach((imagem) => {
+      imagem.addEventListener("mouseenter", () => mostrarDica(imagem));
+      imagem.addEventListener("mouseleave", () => ocultarDica(imagem));
+      imagem.addEventListener("focus", () => mostrarDica(imagem));
+      imagem.addEventListener("blur", () => ocultarDica(imagem));
+      imagem.addEventListener("keydown", (evento) => {
+        if (evento.key === "Escape") ocultarDica(imagem);
+      });
+    });
+    window.addEventListener("resize", () => {
+      const imagemAtiva = document.activeElement;
+      if (!dica.hidden && imagemAtiva?.matches?.("img[data-descricao]")) posicionarDica(imagemAtiva);
+    });
+  }
+
   // Botão voltar ao topo
 
   const botaoTopo = document.getElementById("voltar-topo");

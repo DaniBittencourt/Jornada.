@@ -3,9 +3,9 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <meta content="D&uacute;vidas frequentes sobre gesta&ccedil;&atilde;o, parto, p&oacute;s-parto e sa&uacute;de emocional, com informa&ccedil;&atilde;o e acolhimento." name="description"/>
+  <meta content="Dúvidas frequentes sobre gestação, parto, pós-parto e saúde emocional, com informação e acolhimento." name="description"/>
   <title>
-   D&uacute;vidas | Jornada
+   Dúvidas | Jornada
   </title>
   <link href="css/style.css" rel="stylesheet"/>
   <script defer="" src="js/main.js">
@@ -249,7 +249,7 @@
   max-height: 92%;
   object-fit: contain;
   transform: translateY(-50%);
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 @media (max-width: 900px) {
@@ -316,7 +316,7 @@
  </head>
  <body class="pagina-duvidas">
   <a class="pular-conteudo" href="#conteudo">
-   Pular para o conte&uacute;do
+   Pular para o conteúdo
   </a>
   <header class="topo">
    <div class="container cabecalho">
@@ -326,9 +326,9 @@
       .
      </span>
     </a>
-    <nav aria-label="Navega&ccedil;&atilde;o principal" class="menu">
+    <nav aria-label="Navegação principal" class="menu">
      <a href="index.html">
-      In&iacute;cio
+      Início
      </a>
      <a href="fases.html">
       Fases
@@ -337,13 +337,13 @@
       Direitos
      </a>
      <a aria-current="page" href="duvidas.html">
-      D&uacute;vidas
+      Dúvidas
      </a>
      <a href="apoio.html">
       Apoio
      </a>
      <a href="perda.html">
-      Ap&oacute;s uma perda
+      Após uma perda
      </a>
     </nav>
     <button aria-controls="painel-acessibilidade" aria-expanded="false" class="botao-acessibilidade" type="button">
@@ -351,10 +351,11 @@
     </button>
    </div>
   </header>
-  <section aria-label="Prefer&ecirc;ncias de acessibilidade" class="painel-acessibilidade" hidden="" id="painel-acessibilidade">
+
+  <section aria-label="Preferências de acessibilidade" class="painel-acessibilidade" hidden="" id="painel-acessibilidade">
    <div class="container painel-acessibilidade-conteudo">
     <strong>
-     Prefer&ecirc;ncias de acessibilidade
+     Preferências de acessibilidade
     </strong>
     <div class="painel-acessibilidade-opcoes">
      <button data-tamanho="normal" type="button">
@@ -372,40 +373,33 @@
     </div>
    </div>
   </section>
+
   <main id="conteudo">
    <section class="pagina-apresentacao">
-    <details class="descricao-ilustracao">
-     <summary>
-      Sobre a ilustra&ccedil;&atilde;o
-     </summary>
-     <p>
-      Ilustra&ccedil;&atilde;o de pontos de interroga&ccedil;&atilde;o e exclama&ccedil;&atilde;o em tons suaves.
-     </p>
-    </details>
-    <img alt="Pontos de interroga&ccedil;&atilde;o e exclama&ccedil;&atilde;o em verde-s&aacute;lvia e bege" class="ilustracao-duvidas" height="780" loading="eager" src="assets/duvidas-simbolos.png" title="Ilustra&ccedil;&atilde;o de pontos de interroga&ccedil;&atilde;o e exclama&ccedil;&atilde;o em tons suaves." width="900"/>
+    <img alt="Pontos de interrogação e exclamação em verde-sálvia e bege" class="ilustracao-duvidas" height="780" loading="eager" src="assets/duvidas-simbolos.png" data-descricao="Ilustração de pontos de interrogação e exclamação em tons suaves." tabindex="0" width="900"/>
     <div class="container">
      <h1>
-      Suas perguntas tamb&eacute;m fazem parte
+      Suas perguntas também fazem parte
       <em>
        da jornada.
       </em>
      </h1>
      <p class="descricao">
-      Nem toda d&uacute;vida precisa ser enfrentada sozinha. Encontre respostas iniciais, em linguagem
-simples, sobre gesta&ccedil;&atilde;o, parto, p&oacute;s-parto e sa&uacute;de emocional.
+      Nem toda dúvida precisa ser enfrentada sozinha. Encontre respostas iniciais, em linguagem
+simples, sobre gestação, parto, pós-parto e saúde emocional.
      </p>
-     <nav aria-label="Ir para temas de d&uacute;vidas" class="atalhos">
+     <nav aria-label="Ir para temas de dúvidas" class="atalhos">
       <a href="#gestacao">
-       Gesta&ccedil;&atilde;o
+       Gestação
       </a>
       <a href="#parto">
        Parto
       </a>
       <a href="#pos-parto">
-       P&oacute;s-parto
+       Pós-parto
       </a>
       <a href="#emocional">
-       Sa&uacute;de emocional
+       Saúde emocional
       </a>
      </nav>
     </div>
@@ -415,11 +409,11 @@ simples, sobre gesta&ccedil;&atilde;o, parto, p&oacute;s-parto e sa&uacute;de em
     <div class="container">
      <div class="busca-painel">
       <label for="buscar-duvidas">
-       O que voc&ecirc; gostaria de saber?
+       O que você gostaria de saber?
       </label>
-      <input aria-describedby="status-busca" autocomplete="off" id="buscar-duvidas" placeholder="Busque por assunto: pr&eacute;-natal, amamenta&ccedil;&atilde;o, direitos..." type="search"/>
+      <input aria-describedby="status-busca" autocomplete="off" id="buscar-duvidas" placeholder="Busque por assunto: pré-natal, amamentação, direitos..." type="search"/>
       <p aria-live="polite" class="busca-status" id="status-busca" role="status">
-       20 perguntas dispon&iacute;veis.
+       20 perguntas disponíveis.
       </p>
      </div>
     </div>
@@ -429,29 +423,29 @@ simples, sobre gesta&ccedil;&atilde;o, parto, p&oacute;s-parto e sa&uacute;de em
     <div class="container">
      <div class="titulo-secao">
       <h2>
-       Gesta&ccedil;&atilde;o
+       Gestação
       </h2>
      </div>
      <p class="introducao-secao">
-      D&uacute;vidas sobre o in&iacute;cio da gravidez, consultas e cuidados.
+      Dúvidas sobre o início da gravidez, consultas e cuidados.
      </p>
      <div class="lista-duvidas">
       <details class="duvida" data-pergunta="">
        <summary>
-        Quando devo come&ccedil;ar o pr&eacute;-natal?
+        Quando devo começar o pré-natal?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Assim que souber ou suspeitar da gravidez, procure uma Unidade B&aacute;sica de Sa&uacute;de (UBS) ou o
-servi&ccedil;o de sa&uacute;de de sua prefer&ecirc;ncia. O acompanhamento desde o in&iacute;cio ajuda a organizar
-consultas, exames e orienta&ccedil;&otilde;es.
+         Assim que souber ou suspeitar da gravidez, procure uma Unidade Básica de Saúde (UBS) ou o
+serviço de saúde de sua preferência. O acompanhamento desde o início ajuda a organizar
+consultas, exames e orientações.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         O ideal &eacute; iniciar assim que houver suspeita ou confirma&ccedil;&atilde;o, preferencialmente at&eacute; a 12&ordf; semana.
-Mesmo ap&oacute;s esse per&iacute;odo, procure atendimento: come&ccedil;ar mais tarde &eacute; melhor do que ficar sem
+         O ideal é iniciar assim que houver suspeita ou confirmação, preferencialmente até a 12ª semana.
+Mesmo após esse período, procure atendimento: começar mais tarde é melhor do que ficar sem
 acompanhamento.
         </p>
        </div>
@@ -463,73 +457,73 @@ acompanhamento.
        </summary>
        <div class="duvida-resposta">
         <p>
-         Leve um documento de identifica&ccedil;&atilde;o, o cart&atilde;o do SUS, se tiver, exames anteriores e uma lista de
-medicamentos em uso. Se faltar algum desses itens, n&atilde;o deixe de procurar atendimento.
+         Leve um documento de identificação, o cartão do SUS, se tiver, exames anteriores e uma lista de
+medicamentos em uso. Se faltar algum desses itens, não deixe de procurar atendimento.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Leve identifica&ccedil;&atilde;o, cart&atilde;o do SUS se tiver, exames anteriores e lista de medicamentos. Se n&atilde;o
-tiver todos os documentos, procure a UBS mesmo assim e pe&ccedil;a orienta&ccedil;&atilde;o.
+         Leve identificação, cartão do SUS se tiver, exames anteriores e lista de medicamentos. Se não
+tiver todos os documentos, procure a UBS mesmo assim e peça orientação.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Quais sintomas merecem atendimento r&aacute;pido durante a gesta&ccedil;&atilde;o?
+        Quais sintomas merecem atendimento rápido durante a gestação?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Sangramento vaginal, perda de l&iacute;quido, dor abdominal intensa, dor de cabe&ccedil;a forte com altera&ccedil;&otilde;es
-na vis&atilde;o, falta de ar importante e redu&ccedil;&atilde;o dos movimentos do beb&ecirc;, quando j&aacute; percebidos
-regularmente, precisam de avalia&ccedil;&atilde;o r&aacute;pida.
+         Sangramento vaginal, perda de líquido, dor abdominal intensa, dor de cabeça forte com alterações
+na visão, falta de ar importante e redução dos movimentos do bebê, quando já percebidos
+regularmente, precisam de avaliação rápida.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Sangramento, dor abdominal forte, falta de ar, dor no peito, desmaio, dor de cabe&ccedil;a intensa com
-altera&ccedil;&otilde;es visuais ou diminui&ccedil;&atilde;o importante dos movimentos fetais precisam de avalia&ccedil;&atilde;o r&aacute;pida.
+         Sangramento, dor abdominal forte, falta de ar, dor no peito, desmaio, dor de cabeça intensa com
+alterações visuais ou diminuição importante dos movimentos fetais precisam de avaliação rápida.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Posso tomar ch&aacute;s, rem&eacute;dios e suplementos por conta pr&oacute;pria?
+        Posso tomar chás, remédios e suplementos por conta própria?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Nem todos os medicamentos e produtos naturais s&atilde;o seguros na gravidez. Converse com a equipe de
-sa&uacute;de antes de iniciar, interromper ou modificar qualquer tratamento.
+         Nem todos os medicamentos e produtos naturais são seguros na gravidez. Converse com a equipe de
+saúde antes de iniciar, interromper ou modificar qualquer tratamento.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Nem todo ch&aacute; ou produto natural &eacute; seguro na gesta&ccedil;&atilde;o. Leve &agrave; consulta os nomes e as doses de
-rem&eacute;dios, suplementos e ervas que utiliza. N&atilde;o interrompa tratamento prescrito sem orienta&ccedil;&atilde;o.
+         Nem todo chá ou produto natural é seguro na gestação. Leve à consulta os nomes e as doses de
+remédios, suplementos e ervas que utiliza. Não interrompa tratamento prescrito sem orientação.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        &Eacute; poss&iacute;vel praticar atividade f&iacute;sica durante a gravidez?
+        É possível praticar atividade física durante a gravidez?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Em muitas gesta&ccedil;&otilde;es, sim. A atividade mais adequada depende da sua sa&uacute;de e de poss&iacute;veis
-contraindica&ccedil;&otilde;es. Pe&ccedil;a orienta&ccedil;&otilde;es individualizadas durante o pr&eacute;-natal.
+         Em muitas gestações, sim. A atividade mais adequada depende da sua saúde e de possíveis
+contraindicações. Peça orientações individualizadas durante o pré-natal.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Em gesta&ccedil;&otilde;es sem contraindica&ccedil;&atilde;o, caminhadas e atividades leves a moderadas costumam trazer
-benef&iacute;cios. Comece aos poucos e interrompa se houver dor, sangramento, tontura ou falta de ar
+         Em gestações sem contraindicação, caminhadas e atividades leves a moderadas costumam trazer
+benefícios. Comece aos poucos e interrompa se houver dor, sangramento, tontura ou falta de ar
 importante.
         </p>
        </div>
@@ -537,45 +531,47 @@ importante.
 
       <details class="duvida" data-pergunta="">
        <summary>
-        O que &eacute; a s&iacute;ndrome de Down?
+        O que é a síndrome de Down?
        </summary>
        <div class="duvida-resposta">
         <p>
-         A s&iacute;ndrome de Down, tamb&eacute;m chamada trissomia 21, acontece quando h&aacute; uma c&oacute;pia extra total
-         ou parcial do cromossomo 21. Pode estar associada a caracter&iacute;sticas f&iacute;sicas, diferen&ccedil;as no
-         desenvolvimento e maior frequ&ecirc;ncia de algumas condi&ccedil;&otilde;es de sa&uacute;de, como altera&ccedil;&otilde;es
-         card&iacute;acas. Cada crian&ccedil;a &eacute; &uacute;nica: suas habilidades e necessidades variam. Acompanhamento de
-         sa&uacute;de e est&iacute;mulos adequados ajudam no desenvolvimento.
+         A síndrome de Down, também chamada trissomia 21, acontece quando há uma cópia extra total
+         ou parcial do cromossomo 21. Pode estar associada a características físicas, diferenças no
+         desenvolvimento e maior frequência de algumas condições de saúde, como alterações
+         cardíacas. Cada criança é única: suas habilidades e necessidades variam. Acompanhamento de
+         saúde e estímulos adequados ajudam no desenvolvimento.
         </p>
         <p>
-         O resultado de um rastreamento n&atilde;o &eacute; um diagn&oacute;stico. Converse com a equipe sobre a necessidade de confirma&ccedil;&atilde;o e sobre acompanhamento pedi&aacute;trico e multiprofissional, caso a condi&ccedil;&atilde;o seja confirmada.
-        </p>
-       </div>
-      </details>
-
-      <details class="duvida" data-pergunta="">
-       <summary>
-        O que s&atilde;o as s&iacute;ndromes de Edwards e de Patau?
-       </summary>
-       <div class="duvida-resposta">
-        <p>
-         A s&iacute;ndrome de Edwards (trissomia 18) e a s&iacute;ndrome de Patau (trissomia 13) s&atilde;o condi&ccedil;&otilde;es
-         cromoss&ocirc;micas associadas a altera&ccedil;&otilde;es de desenvolvimento e problemas de sa&uacute;de que podem
-         ser graves. O quadro e as necessidades variam entre os beb&ecirc;s. A fam&iacute;lia deve receber
-         informa&ccedil;&otilde;es claras, avalia&ccedil;&atilde;o especializada e acolhimento para decidir sobre os cuidados.
+         O resultado de um rastreamento não é um diagnóstico. Converse com a equipe sobre a
+         necessidade de confirmação e sobre acompanhamento pediátrico e multiprofissional, caso a
+         condição seja confirmada.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        O que &eacute; a s&iacute;ndrome de Turner?
+        O que são as síndromes de Edwards e de Patau?
        </summary>
        <div class="duvida-resposta">
         <p>
-         A s&iacute;ndrome de Turner ocorre quando um dos cromossomos X est&aacute; ausente ou alterado,
-         totalmente ou em parte, em algumas ou todas as c&eacute;lulas. Pode afetar crescimento, puberdade
-         e sa&uacute;de card&iacute;aca, entre outros aspectos. A apresenta&ccedil;&atilde;o varia e o acompanhamento &eacute;
+         A síndrome de Edwards (trissomia 18) e a síndrome de Patau (trissomia 13) são condições
+         cromossômicas associadas a alterações de desenvolvimento e problemas de saúde que podem
+         ser graves. O quadro e as necessidades variam entre os bebês. A família deve receber
+         informações claras, avaliação especializada e acolhimento para decidir sobre os cuidados.
+        </p>
+       </div>
+      </details>
+
+      <details class="duvida" data-pergunta="">
+       <summary>
+        O que é a síndrome de Turner?
+       </summary>
+       <div class="duvida-resposta">
+        <p>
+         A síndrome de Turner ocorre quando um dos cromossomos X está ausente ou alterado,
+         totalmente ou em parte, em algumas ou todas as células. Pode afetar crescimento, puberdade
+         e saúde cardíaca, entre outros aspectos. A apresentação varia e o acompanhamento é
          individualizado.
         </p>
        </div>
@@ -583,18 +579,18 @@ importante.
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Um exame alterado confirma que o beb&ecirc; tem uma s&iacute;ndrome?
+        Um exame alterado confirma que o bebê tem uma síndrome?
        </summary>
        <div class="duvida-resposta">
         <p>
-         N&atilde;o necessariamente. Ultrassonografias e exames de rastreamento, como o NIPT, estimam
-         chances e n&atilde;o confirmam sozinhos um diagn&oacute;stico. A equipe do pr&eacute;-natal pode explicar
-         quando exames diagn&oacute;sticos, como amniocentese ou bi&oacute;psia de vilo corial, s&atilde;o indicados,
-         incluindo benef&iacute;cios, limita&ccedil;&otilde;es e riscos.
+         Não necessariamente. Ultrassonografias e exames de rastreamento, como o NIPT, estimam
+         chances e não confirmam sozinhos um diagnóstico. A equipe do pré-natal pode explicar
+         quando exames diagnósticos, como amniocentese ou biópsia de vilo corial, são indicados,
+         incluindo benefícios, limitações e riscos.
         </p>
         <p>
          <a href="fases.html#gestacao">
-          Saiba mais na cartilha de Gesta&ccedil;&atilde;o.
+          Saiba mais na cartilha de Gestação.
          </a>
         </p>
        </div>
@@ -602,53 +598,53 @@ importante.
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Como buscar apoio ap&oacute;s um diagn&oacute;stico?
+        Como buscar apoio após um diagnóstico?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Voc&ecirc; pode pedir uma explica&ccedil;&atilde;o acess&iacute;vel &agrave; equipe de sa&uacute;de, solicitar encaminhamento para
-         aconselhamento gen&eacute;tico e discutir o acompanhamento na UBS e em servi&ccedil;os especializados. A
-         crian&ccedil;a continua sendo uma pessoa singular, com v&iacute;nculos, afetos e direitos. &Eacute; v&aacute;lido
-         reconhecer tamb&eacute;m as dificuldades e buscar apoio para a fam&iacute;lia. Veja a p&aacute;gina Apoio.
+         Você pode pedir uma explicação acessível à equipe de saúde, solicitar encaminhamento para
+         aconselhamento genético e discutir o acompanhamento na UBS e em serviços especializados. A
+         criança continua sendo uma pessoa singular, com vínculos, afetos e direitos. É válido
+         reconhecer também as dificuldades e buscar apoio para a família. Veja a página Apoio.
         </p>
         <p>
          <a href="apoio.html">
-          Conhe&ccedil;a a rede de apoio.
+          Conheça a rede de apoio.
          </a>
         </p>
        </div>
       </details>
      </div>
      <p class="bloco-dica">
-      As informa&ccedil;&otilde;es s&atilde;o gerais e n&atilde;o substituem a avalia&ccedil;&atilde;o de profissionais. Fontes:
+      As informações são gerais e não substituem a avaliação de profissionais. Fontes:
       <a href="https://medlineplus.gov/genetics/condition/down-syndrome/" rel="noopener noreferrer" target="_blank">
-       MedlinePlus Genetics &mdash; s&iacute;ndrome de Down
+       MedlinePlus Genetics — síndrome de Down
       </a>
       ;
       <a href="https://medlineplus.gov/genetics/condition/trisomy-18/" rel="noopener noreferrer" target="_blank">
-       MedlinePlus Genetics &mdash; trissomia 18
+       MedlinePlus Genetics — trissomia 18
       </a>
       ;
       <a href="https://medlineplus.gov/genetics/condition/trisomy-13/" rel="noopener noreferrer" target="_blank">
-       MedlinePlus Genetics &mdash; trissomia 13
+       MedlinePlus Genetics — trissomia 13
       </a>
       ;
       <a href="https://medlineplus.gov/genetics/condition/turner-syndrome/" rel="noopener noreferrer" target="_blank">
-       MedlinePlus Genetics &mdash; s&iacute;ndrome de Turner
+       MedlinePlus Genetics — síndrome de Turner
       </a>
      </p>
      <div class="bloco-dica">
       <h3>
-       Perguntas para a pr&oacute;xima consulta
+       Perguntas para a próxima consulta
       </h3>
       <p>
-       Marque os itens que forem &uacute;teis para voc&ecirc;. A lista &eacute; apenas uma ajuda para se organizar.
+       Marque os itens que forem úteis para você. A lista é apenas uma ajuda para se organizar.
       </p>
-      <div aria-label="Perguntas para a pr&oacute;xima consulta" class="checklist-jornada">
+      <div aria-label="Perguntas para a próxima consulta" class="checklist-jornada">
        <label>
         <input type="checkbox"/>
         <span>
-         Anotar sintomas e quando come&ccedil;aram
+         Anotar sintomas e quando começaram
         </span>
        </label>
        <label>
@@ -660,7 +656,7 @@ importante.
        <label>
         <input type="checkbox"/>
         <span>
-         Listar medicamentos, ch&aacute;s e suplementos
+         Listar medicamentos, chás e suplementos
         </span>
        </label>
        <label>
@@ -697,7 +693,7 @@ importante.
       </h2>
      </div>
      <p class="introducao-secao">
-      Informa&ccedil;&atilde;o para compreender op&ccedil;&otilde;es e participar das decis&otilde;es.
+      Informação para compreender opções e participar das decisões.
      </p>
      <div class="lista-duvidas">
       <details class="duvida" data-pergunta="">
@@ -706,35 +702,35 @@ importante.
        </summary>
        <div class="duvida-resposta">
         <p>
-         Contra&ccedil;&otilde;es que ficam regulares, mais pr&oacute;ximas e intensas podem indicar trabalho de parto. O
-momento de ir &agrave; maternidade depende da sua situa&ccedil;&atilde;o e das orienta&ccedil;&otilde;es recebidas no pr&eacute;-natal.
+         Contrações que ficam regulares, mais próximas e intensas podem indicar trabalho de parto. O
+momento de ir à maternidade depende da sua situação e das orientações recebidas no pré-natal.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Contra&ccedil;&otilde;es que ficam mais regulares, pr&oacute;ximas e intensas podem indicar evolu&ccedil;&atilde;o do trabalho de
+         Contrações que ficam mais regulares, próximas e intensas podem indicar evolução do trabalho de
 parto. Combine com a maternidade quando procurar atendimento, especialmente se mora longe ou tem
-gesta&ccedil;&atilde;o de risco.
+gestação de risco.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        E se a bolsa romper antes das contra&ccedil;&otilde;es?
+        E se a bolsa romper antes das contrações?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Entre em contato com a maternidade ou o servi&ccedil;o que acompanha voc&ecirc; para receber orienta&ccedil;&atilde;o sem
-esperar necessariamente o in&iacute;cio das contra&ccedil;&otilde;es.
+         Entre em contato com a maternidade ou o serviço que acompanha você para receber orientação sem
+esperar necessariamente o início das contrações.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Entre em contato com a maternidade e siga a orienta&ccedil;&atilde;o de avalia&ccedil;&atilde;o, mesmo sem contra&ccedil;&otilde;es.
-Observe a hora e a cor do l&iacute;quido, mas n&atilde;o atrase a ida para tentar descobrir sozinho o que
+         Entre em contato com a maternidade e siga a orientação de avaliação, mesmo sem contrações.
+Observe a hora e a cor do líquido, mas não atrase a ida para tentar descobrir sozinho o que
 aconteceu.
         </p>
        </div>
@@ -746,15 +742,15 @@ aconteceu.
        </summary>
        <div class="duvida-resposta">
         <p>
-         No Brasil, existem garantias legais sobre a presen&ccedil;a de acompanhante durante o atendimento ao
-parto. Veja a p&aacute;gina Direitos para conhecer as regras aplic&aacute;veis e como buscar orienta&ccedil;&atilde;o.
+         No Brasil, existem garantias legais sobre a presença de acompanhante durante o atendimento ao
+parto. Veja a página Direitos para conhecer as regras aplicáveis e como buscar orientação.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         A pessoa acompanhante pode ser algu&eacute;m de sua confian&ccedil;a. Consulte a p&aacute;gina Direitos para entender
-as garantias e orienta&ccedil;&otilde;es sobre o servi&ccedil;o de parto.
+         A pessoa acompanhante pode ser alguém de sua confiança. Consulte a página Direitos para entender
+as garantias e orientações sobre o serviço de parto.
         </p>
        </div>
       </details>
@@ -765,34 +761,34 @@ as garantias e orienta&ccedil;&otilde;es sobre o servi&ccedil;o de parto.
        </summary>
        <div class="duvida-resposta">
         <p>
-         Sim. Voc&ecirc; pode pedir explica&ccedil;&otilde;es compreens&iacute;veis sobre o motivo da interven&ccedil;&atilde;o, seus benef&iacute;cios,
-riscos e alternativas. Em situa&ccedil;&otilde;es de emerg&ecirc;ncia, o tempo para decis&atilde;o pode ser limitado.
+         Sim. Você pode pedir explicações compreensíveis sobre o motivo da intervenção, seus benefícios,
+riscos e alternativas. Em situações de emergência, o tempo para decisão pode ser limitado.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Sim. Pergunte qual &eacute; o objetivo, os benef&iacute;cios, os riscos e as alternativas. Em emerg&ecirc;ncias,
-algumas decis&otilde;es precisam ser r&aacute;pidas, mas a equipe deve se comunicar com respeito.
+         Sim. Pergunte qual é o objetivo, os benefícios, os riscos e as alternativas. Em emergências,
+algumas decisões precisam ser rápidas, mas a equipe deve se comunicar com respeito.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Cesariana e parto vaginal: como saber qual &eacute; o mais indicado?
+        Cesariana e parto vaginal: como saber qual é o mais indicado?
        </summary>
        <div class="duvida-resposta">
         <p>
-         A indica&ccedil;&atilde;o depende da avalia&ccedil;&atilde;o cl&iacute;nica da gestante e do beb&ecirc;. Converse com a equipe sobre
-riscos, benef&iacute;cios e alternativas adequadas ao seu caso.
+         A indicação depende da avaliação clínica da gestante e do bebê. Converse com a equipe sobre
+riscos, benefícios e alternativas adequadas ao seu caso.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Ambas as vias de parto t&ecirc;m benef&iacute;cios e riscos. A indica&ccedil;&atilde;o depende do hist&oacute;rico, das condi&ccedil;&otilde;es
-cl&iacute;nicas, do beb&ecirc; e das prefer&ecirc;ncias informadas. Veja a compara&ccedil;&atilde;o completa em Fases.
+         Ambas as vias de parto têm benefícios e riscos. A indicação depende do histórico, das condições
+clínicas, do bebê e das preferências informadas. Veja a comparação completa em Fases.
         </p>
        </div>
       </details>
@@ -804,111 +800,113 @@ cl&iacute;nicas, do beb&ecirc; e das prefer&ecirc;ncias informadas. Veja a compa
     <div class="container">
      <div class="titulo-secao">
       <h2>
-       P&oacute;s-parto
+       Pós-parto
       </h2>
      </div>
      <p class="introducao-secao">
-      Cuidados com o corpo, o beb&ecirc; e a adapta&ccedil;&atilde;o &agrave; nova rotina.
+      Cuidados com o corpo, o bebê e a adaptação à nova rotina.
      </p>
      <div class="lista-duvidas">
       <details class="duvida" data-pergunta="">
        <summary>
-        Quanto tempo dura a recupera&ccedil;&atilde;o depois do parto?
+        Quanto tempo dura a recuperação depois do parto?
        </summary>
        <div class="duvida-resposta">
         <p>
-         A recupera&ccedil;&atilde;o varia conforme o tipo de parto, as condi&ccedil;&otilde;es de sa&uacute;de e as necessidades de cada
-pessoa. O acompanhamento ap&oacute;s a alta &eacute; importante para avaliar cicatriza&ccedil;&atilde;o, sangramento, dor e
+         A recuperação varia conforme o tipo de parto, as condições de saúde e as necessidades de cada
+pessoa. O acompanhamento após a alta é importante para avaliar cicatrização, sangramento, dor e
 bem-estar.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         A recupera&ccedil;&atilde;o varia conforme a via de parto, presen&ccedil;a de pontos, sono e outras condi&ccedil;&otilde;es. Dor
-intensa, febre ou piora progressiva merecem avalia&ccedil;&atilde;o.
+         A recuperação varia conforme a via de parto, presença de pontos, sono e outras condições. Dor
+intensa, febre ou piora progressiva merecem avaliação.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Quando o sangramento do p&oacute;s-parto &eacute; preocupante?
+        Quando o sangramento do pós-parto é preocupante?
        </summary>
        <div class="duvida-resposta">
         <p>
          Sangramento muito intenso, desmaio, febre, dor forte, falta de ar ou dor no peito exigem
-avalia&ccedil;&atilde;o r&aacute;pida. N&atilde;o espere pela pr&oacute;xima consulta se surgirem sinais de alerta.
+avaliação rápida. Não espere pela próxima consulta se surgirem sinais de alerta.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
          O sangramento costuma diminuir gradualmente. Se encharcar um absorvente grande em uma hora,
-tiver tontura, febre, odor forte ou co&aacute;gulos grandes, procure atendimento.
+tiver tontura, febre, odor forte ou coágulos grandes, procure atendimento.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        E se a amamenta&ccedil;&atilde;o estiver doendo?
+        E se a amamentação estiver doendo?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Dor persistente, feridas ou dificuldades na pega merecem avalia&ccedil;&atilde;o. Pe&ccedil;a que um profissional
-observe uma mamada e ajude a encontrar uma posi&ccedil;&atilde;o confort&aacute;vel e segura.
+         Dor persistente, feridas ou dificuldades na pega merecem avaliação. Peça que um profissional
+observe uma mamada e ajude a encontrar uma posição confortável e segura.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Verifique a pega e a posi&ccedil;&atilde;o com a equipe. Fissuras e dor persistente n&atilde;o precisam ser
-suportadas. Evite pomadas e receitas caseiras sem verificar se s&atilde;o seguras para o beb&ecirc;.
+         Verifique a pega e a posição com a equipe. Fissuras e dor persistente não precisam ser
+suportadas. Evite pomadas e receitas caseiras sem verificar se são seguras para o bebê.
         </p>
         <p>
-         Dificuldades para amamentar merecem avalia&ccedil;&atilde;o da pega, da posi&ccedil;&atilde;o e do crescimento do beb&ecirc;. A UBS e os bancos de leite humano podem orientar sem julgamentos.
+         Dificuldades para amamentar merecem avaliação da pega, da posição e do crescimento do bebê.
+         A UBS e os bancos de leite humano podem orientar sem julgamentos.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        E se eu n&atilde;o conseguir amamentar?
+        E se eu não conseguir amamentar?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Voc&ecirc; merece apoio sem julgamentos e orienta&ccedil;&atilde;o individualizada sobre alternativas seguras para
-alimentar o beb&ecirc;. A equipe de sa&uacute;de pode ajudar a planejar os cuidados.
+         Você merece apoio sem julgamentos e orientação individualizada sobre alternativas seguras para
+alimentar o bebê. A equipe de saúde pode ajudar a planejar os cuidados.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Pe&ccedil;a orienta&ccedil;&atilde;o sobre alimenta&ccedil;&atilde;o segura e acompanhamento do peso. Algumas fam&iacute;lias precisam de
-f&oacute;rmula infantil; a escolha e o preparo devem ser orientados conforme a idade do beb&ecirc;.
+         Peça orientação sobre alimentação segura e acompanhamento do peso. Algumas famílias precisam de
+fórmula infantil; a escolha e o preparo devem ser orientados conforme a idade do bebê.
         </p>
         <p>
-         Dificuldades para amamentar merecem avalia&ccedil;&atilde;o da pega, da posi&ccedil;&atilde;o e do crescimento do beb&ecirc;. A UBS e os bancos de leite humano podem orientar sem julgamentos.
+         Dificuldades para amamentar merecem avaliação da pega, da posição e do crescimento do bebê.
+         A UBS e os bancos de leite humano podem orientar sem julgamentos.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Quando devo procurar atendimento para o rec&eacute;m-nascido?
+        Quando devo procurar atendimento para o recém-nascido?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Febre, dificuldade para respirar, colora&ccedil;&atilde;o azulada, sonol&ecirc;ncia excessiva ou dificuldade
+         Febre, dificuldade para respirar, coloração azulada, sonolência excessiva ou dificuldade
 importante para se alimentar exigem atendimento urgente.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Febre em beb&ecirc; muito pequeno, dificuldade para respirar, recusa persistente de alimenta&ccedil;&atilde;o,
-colora&ccedil;&atilde;o azulada ou sonol&ecirc;ncia fora do habitual exigem avalia&ccedil;&atilde;o r&aacute;pida.
+         Febre em bebê muito pequeno, dificuldade para respirar, recusa persistente de alimentação,
+coloração azulada ou sonolência fora do habitual exigem avaliação rápida.
         </p>
        </div>
       </details>
@@ -920,50 +918,50 @@ colora&ccedil;&atilde;o azulada ou sonol&ecirc;ncia fora do habitual exigem aval
     <div class="container">
      <div class="titulo-secao">
       <h2>
-       Sa&uacute;de emocional e apoio
+       Saúde emocional e apoio
       </h2>
      </div>
      <p class="introducao-secao">
-      Voc&ecirc; tamb&eacute;m merece ser cuidada em todas as fases.
+      Você também merece ser cuidada em todas as fases.
      </p>
      <div class="lista-duvidas">
       <details class="duvida" data-pergunta="">
        <summary>
-        &Eacute; normal sentir medo ou inseguran&ccedil;a durante a gravidez?
+        É normal sentir medo ou insegurança durante a gravidez?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Medos e d&uacute;vidas podem surgir em diferentes momentos. Compartilhar o que sente com pessoas de
-confian&ccedil;a e com a equipe de sa&uacute;de pode ajudar. Se o sofrimento for intenso ou persistente,
-busque avalia&ccedil;&atilde;o.
+         Medos e dúvidas podem surgir em diferentes momentos. Compartilhar o que sente com pessoas de
+confiança e com a equipe de saúde pode ajudar. Se o sofrimento for intenso ou persistente,
+busque avaliação.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Sentimentos variados s&atilde;o comuns, mas preocupa&ccedil;&otilde;es intensas ou persistentes merecem escuta. Voc&ecirc;
-pode falar sobre isso durante o pr&eacute;-natal, mesmo que pare&ccedil;a dif&iacute;cil explicar.
+         Sentimentos variados são comuns, mas preocupações intensas ou persistentes merecem escuta. Você
+pode falar sobre isso durante o pré-natal, mesmo que pareça difícil explicar.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Qual &eacute; a diferen&ccedil;a entre tristeza passageira e depress&atilde;o p&oacute;s-parto?
+        Qual é a diferença entre tristeza passageira e depressão pós-parto?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Mudan&ccedil;as de humor podem ocorrer nos primeiros dias ap&oacute;s o parto. Tristeza intensa ou
-persistente, perda de interesse, desesperan&ccedil;a ou dificuldade importante para realizar atividades
-merecem avalia&ccedil;&atilde;o profissional.
+         Mudanças de humor podem ocorrer nos primeiros dias após o parto. Tristeza intensa ou
+persistente, perda de interesse, desesperança ou dificuldade importante para realizar atividades
+merecem avaliação profissional.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         O baby blues costuma surgir nos primeiros dias e melhorar em at&eacute; duas semanas. Tristeza intensa,
-perda de interesse ou dificuldade para funcionar podem indicar depress&atilde;o p&oacute;s-parto e precisam de
-avalia&ccedil;&atilde;o.
+         O baby blues costuma surgir nos primeiros dias e melhorar em até duas semanas. Tristeza intensa,
+perda de interesse ou dificuldade para funcionar podem indicar depressão pós-parto e precisam de
+avaliação.
         </p>
        </div>
       </details>
@@ -974,55 +972,55 @@ avalia&ccedil;&atilde;o.
        </summary>
        <div class="duvida-resposta">
         <p>
-         Voc&ecirc; pode come&ccedil;ar com um pedido concreto: &ldquo;Preciso que algu&eacute;m fique comigo&rdquo;, &ldquo;Voc&ecirc; pode preparar
-uma refei&ccedil;&atilde;o?&rdquo; ou &ldquo;Pode me acompanhar &agrave; consulta?&rdquo;. A UBS tamb&eacute;m pode orientar sobre servi&ccedil;os de
+         Você pode começar com um pedido concreto: “Preciso que alguém fique comigo”, “Você pode preparar
+uma refeição?” ou “Pode me acompanhar à consulta?”. A UBS também pode orientar sobre serviços de
 apoio.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Tente nomear uma necessidade concreta: acompanhar uma consulta, preparar uma refei&ccedil;&atilde;o ou ficar
-com o beb&ecirc; enquanto voc&ecirc; descansa. A UBS tamb&eacute;m pode orientar sobre servi&ccedil;os de apoio.
+         Tente nomear uma necessidade concreta: acompanhar uma consulta, preparar uma refeição ou ficar
+com o bebê enquanto você descansa. A UBS também pode orientar sobre serviços de apoio.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        E se eu tiver pensamentos de me machucar ou machucar o beb&ecirc;?
+        E se eu tiver pensamentos de me machucar ou machucar o bebê?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Procure ajuda imediatamente e n&atilde;o fique sozinha. Pe&ccedil;a a algu&eacute;m de confian&ccedil;a que acompanhe voc&ecirc; a
-um servi&ccedil;o de urg&ecirc;ncia. No Brasil, em emerg&ecirc;ncia, ligue 192.
+         Procure ajuda imediatamente e não fique sozinha. Peça a alguém de confiança que acompanhe você a
+um serviço de urgência. No Brasil, em emergência, ligue 192.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         Procure atendimento de urg&ecirc;ncia imediatamente e n&atilde;o permane&ccedil;a sozinha com esse sofrimento. No
-Brasil, o SAMU atende pelo 192; o CVV, pelo 188, oferece apoio emocional, mas n&atilde;o substitui
-emerg&ecirc;ncia.
+         Procure atendimento de urgência imediatamente e não permaneça sozinha com esse sofrimento. No
+Brasil, o SAMU atende pelo 192; o CVV, pelo 188, oferece apoio emocional, mas não substitui
+emergência.
         </p>
        </div>
       </details>
 
       <details class="duvida" data-pergunta="">
        <summary>
-        Onde encontro informa&ccedil;&otilde;es sobre direitos e acolhimento?
+        Onde encontro informações sobre direitos e acolhimento?
        </summary>
        <div class="duvida-resposta">
         <p>
-         Consulte as p&aacute;ginas Direitos e Apoio do Jornada. Voc&ecirc; tamb&eacute;m pode procurar a UBS, a maternidade
-ou os servi&ccedil;os p&uacute;blicos de prote&ccedil;&atilde;o e assist&ecirc;ncia da sua regi&atilde;o.
+         Consulte as páginas Direitos e Apoio do Jornada. Você também pode procurar a UBS, a maternidade
+ou os serviços públicos de proteção e assistência da sua região.
         </p>
-        <h4>
+        <h3>
          Para entender melhor
-        </h4>
+        </h3>
         <p>
-         As p&aacute;ginas Direitos e Apoio re&uacute;nem orienta&ccedil;&otilde;es espec&iacute;ficas. Para quest&otilde;es cl&iacute;nicas, a equipe de
-sa&uacute;de que acompanha sua situa&ccedil;&atilde;o &eacute; a refer&ecirc;ncia mais adequada.
+         As páginas Direitos e Apoio reúnem orientações específicas. Para questões clínicas, a equipe de
+saúde que acompanha sua situação é a referência mais adequada.
         </p>
        </div>
       </details>
@@ -1035,10 +1033,10 @@ sa&uacute;de que acompanha sua situa&ccedil;&atilde;o &eacute; a refer&ecirc;nci
      <div class="faixa-conteudo">
       <div>
        <h2>
-        N&atilde;o encontrou sua resposta?
+        Não encontrou sua resposta?
        </h2>
        <p>
-        Voc&ecirc; merece ser ouvida. Procure a equipe de sa&uacute;de para orienta&ccedil;&otilde;es espec&iacute;ficas e conhe&ccedil;a
+        Você merece ser ouvida. Procure a equipe de saúde para orientações específicas e conheça
 caminhos para receber acolhimento.
        </p>
       </div>
@@ -1049,17 +1047,18 @@ caminhos para receber acolhimento.
     </div>
    </section>
   </main>
+
   <footer class="rodape">
    <div class="container">
     <p class="rodape-logo">
      jornada.
     </p>
     <p>
-     Conte&uacute;do educativo. N&atilde;o substitui atendimento m&eacute;dico ou orienta&ccedil;&atilde;o jur&iacute;dica.
+     Conteúdo educativo. Não substitui atendimento médico ou orientação jurídica.
     </p>
    </div>
   </footer>
-  <button aria-label="Voltar ao topo da p&aacute;gina" class="voltar-topo" id="voltar-topo" title="Voltar ao topo" type="button">
+  <button aria-label="Voltar ao topo da página" class="voltar-topo" id="voltar-topo" title="Voltar ao topo" type="button">
    <svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22">
     <path d="M12 19V5">
     </path>
